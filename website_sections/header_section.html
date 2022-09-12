@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/vendors/font-awesome.min.css">
+		<style>
+			*
+			{
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+			}
+			/* --------------------------  start : Global Classes style دي الكلاسات الاكثر تكرر -------------------------- */
+			.box_overlay
+			{
+				/* بحرية بالنسبة للديف الاب overlay عشان احرك طبقة ال */
+				position: absolute;
+				/*   top left corner عشان يبدا من ال */
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				background-color:rgba(0,0,0,0.6);
+			}
+			/* --------------------------  End : Global Classes style دي الكلاسات الاكثر تكرر -------------------------- */
+			body
+			{
+				margin: 0; 
+				padding: 0;
+				font-family: sans-serif;
+			}
+			/* ################################# start header section ####################################  */
+			.header
+			{
+				position: relative ;
+				margin: 0;
+				padding: 0 ;
+				background-image: url("../images/back6.jpg");
+				background-position: center ;
+				background-repeat: no-repeat;
+				background-size: cover;
+				height:625px;
+				/* border: 2px solid #ff0; */
+			}
+			.header .headerContainer
+			{
+				position: absolute;
+				top:50%;
+				left: 50%;
+				/* عشان يجي في منتصف الصفحة */
+				transform: translate(-50%,-60%);
+				text-align: center ;
+			}
+			.header .headerContainer h2
+			{
+				/* navbar وال header عشان ميكنش فيه مسافة بين ال */
+				margin: 0;
+				color:#fff;
+				text-transform: capitalize;
+				font-size:80px;
+			}
+			.header .headerContainer p
+			{
+				margin-top: 0 ; 
+				color:#fff;
+				font-size:35px;
+				text-transform: capitalize;
+			}
+			.header .headerContainer p span
+			{
+				color:#D03447;
+			}
+			/* ------------------------- Responsive : media query of navbar --------------------------- */
+			@media( min-width:0px )and (max-width:985px )
+			{
+				.header .headerContainer h2 ,
+				.header .headerContainer p
+				{
+					display: none;
+				}
+			}
+			@media( max-width:985px )
+			{
+				.header .headerContainer h2
+				{
+					font-size:45px;
+				}
+				.header .headerContainer p
+				{
+					font-size:35px;
+				}
+			}
+			/* #################################### end header section ##########################  */
+		
+		</style>
+    </head>
+    <body> 
+		<!-- ################################## start header section ################################ -->
+        <div class="header">
+            <div class="box_overlay"></div>   
+            <div class="headerContainer">
+                <h2>eltokhey</h2>
+                <p>i'm <span>mahmoud eltokhey</span> a front end developer based in egypt</p>
+            </div>
+        </div>
+		<!-- ################################## End header section ################################ -->
+	</body>
+</html>

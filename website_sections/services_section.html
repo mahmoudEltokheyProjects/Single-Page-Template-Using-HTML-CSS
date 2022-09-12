@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/vendors/font-awesome.min.css">
+		<style>
+			*
+			{
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+			}
+			/* --------------------------  End : Global Classes style دي الكلاسات الاكثر تكرر -------------------------- */
+			body
+			{
+				margin: 0; 
+				padding: 0;
+				font-family: sans-serif;
+			}
+			/* ##################################### start my services section #################################  */
+			.service
+			{
+			   /* border: 2px solid #f0f; */
+				height: auto;
+				/* عشان المحتوي كله يكون موجود بداخله والزيادة يتم حذفها */
+				overflow: hidden;
+				background-color: #000;
+			}
+			.service .serviceContainer
+			{
+				width: 85%;
+				height: auto;
+				overflow: hidden;
+				margin: 50px auto ;
+				/* border: 2px solid #f00; */
+			}
+			.service .serviceContainer .serviceHeader
+			{
+				width: 100%;
+				color:#fff;
+				text-align: center;
+				text-transform: capitalize;
+				margin-bottom:30px ;
+			   /* border: 2px solid #0f0; */
+			}
+			.service .serviceContainer .serviceHeader h2
+			{
+				font-size: 40px;
+				color: #fff;
+			}
+			.service .serviceContainer .serviceInfo .serviceInfoBox  
+			{
+				float: left;
+				width:33.3333%;
+				color: #fff;
+				border-left: 2px solid #222;
+				padding-top:30px ;
+				padding-left:35px ;
+				padding-right:35px ;
+				line-height: 1.5 ;
+			}
+
+			.service .serviceContainer .serviceInfo .serviceInfoBox  img
+			{
+				width:15%;
+			}
+			.service .serviceContainer .serviceInfo .serviceInfoBox  h3
+			{
+				text-transform: capitalize;
+			}
+			.service .serviceContainer .serviceInfo .serviceInfoBox  p
+			{
+				color:#999;
+				text-transform: capitalize;
+			}
+			/* ------------------------------------- Responsive portfolio section ------------------------------------- */
+			/* Extra small screen  rules */
+			@media ( min-width:0px) and ( max-width:767px) 	 
+			{
+				.service .serviceContainer .serviceInfo .serviceInfoBox
+				{
+					text-align: center;
+					width:100%;
+					border:0 ;
+				}
+			}
+			/*  small screen  rules */
+			@media ( min-width:768px) and ( max-width:991px) 	 
+			{
+				.service .serviceContainer .serviceInfo .serviceInfoBox
+				{
+					text-align: center;
+					width:50%;
+				}
+			}
+			/* ################################## End my services section ##################################  */
+		</style>
+	</head>
+	<body>
+		<!-- ################################################ start my services section ########################## -->
+        <div class="service">
+            <div class="serviceContainer">
+                <!-- about me header -->
+                <div class="serviceHeader">
+                    <h2>my services</h2>
+                    <img src="../images/divider.png">
+                </div>
+                <!-- about me info -->
+                <div class="serviceInfo">
+                    <!-- first box -->
+                    <div class="serviceInfoBox">
+                        <img src="../images/icon-1.svg">
+                        <h3>digital<br>strategy</h3>
+                        <p>a small river named duden flows by their place and supplies it with the necessary regelialia.</p>
+                    </div>
+                    <!-- second box -->
+                    <div class="serviceInfoBox">
+                        <img src="../images/icon-3.svg">
+                        <h3>user<br>experience</h3>
+                        <p>a small river named duden flows by their place and supplies it with the necessary regelialia.</p>
+                    </div>
+                    <!-- third box -->
+                    <div class="serviceInfoBox">
+                        <img src="../images/icon-5.svg">
+                        <h3>mobile<br>applications</h3>
+                        <p>a small river named duden flows by their place and supplies it with the necessary regelialia.</p>
+                    </div>
+                     <!-- fourth box -->
+                     <div class="serviceInfoBox">
+                        <img src="../images/icon-2.svg">
+                        <h3>web<br>design</h3>
+                        <p>a small river named duden flows by their place and supplies it with the necessary regelialia.</p>
+                    </div>
+                    <!-- fifth box -->
+                    <div class="serviceInfoBox">
+                        <img src="../images/icon-4.svg">
+                        <h3>web<br>developement</h3>
+                        <p>a small river named duden flows by their place and supplies it with the necessary regelialia.</p>
+                    </div>
+                    <!-- sixth box -->
+                    <div class="serviceInfoBox">
+                        <img src="../images/icon-6.svg">
+                        <h3>wordpress<br>solutions</h3>
+                        <p>a small river named duden flows by their place and supplies it with the necessary regelialia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!-- ########################################### End my services section ################################ -->	
+ 	</body>
+</html>
+		

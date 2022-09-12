@@ -1,0 +1,1475 @@
+*
+{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+/* --------------------------  start : Global Classes style دي الكلاسات الاكثر تكرر -------------------------- */
+.box_overlay
+{
+    /* بحرية بالنسبة للديف الاب overlay عشان احرك طبقة ال */
+    position: absolute;
+    /*   top left corner عشان يبدا من ال */
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.6);
+}
+/* --------------------------  End : Global Classes style دي الكلاسات الاكثر تكرر -------------------------- */
+body
+{
+    margin: 0; 
+    padding: 0;
+    font-family: sans-serif;
+    height: 2500px;
+}
+html , body 
+{
+    /*  smooth بشكل  section عشان لما اضغط علي اللينك يتم الانتقال لل */
+	scroll-behavior:smooth ;
+}
+.navbarClass
+{
+    background-color: #000;
+    /* border: 2px solid #f00;  */
+}
+.navbarClass  .navbarContainer
+{
+    width: 85%;
+    height: auto;
+    /*  container عشان المحتوي يتم وضعه داخل ال */
+    overflow: hidden;
+    /* في المنتصف افقيا و مفيش مسافة راسيا  */
+    margin: 0px auto;
+    padding-top:10px;
+    padding-bottom:8px;
+    /* border:2px solid #0ff; */
+}
+.navbarClass  .navbarContainer .leftLinksClass ,
+.navbarClass  .navbarContainer .rightLinksClass
+{
+    width:40%;
+    display: inline-block;
+}
+.navbarClass  .navbarContainer .leftLinksClass 
+{
+    float: left;
+    text-align: right;
+}
+.navbarClass  .navbarContainer .rightLinksClass
+{
+    float: right;
+    text-align: left;
+}
+.navbarClass  .navbarContainer .logoClass
+{
+    width: 20% ;
+   /* border: 2px solid #0f0; */
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+}
+.navbarClass  .navbarContainer .logoClass p
+{
+    text-transform: capitalize ; 
+    font-size:24px;
+    color: #fff;
+    margin:10px;
+}
+.navbarClass  .navbarContainer .logoClass p span
+{
+    color:#D03447;
+}
+.navbarClass  .navbarContainer ul
+{
+    list-style: none;
+    margin: 0 ;
+    padding:0 ;
+}
+.navbarClass  .navbarContainer ul li
+{
+    display: inline-block ;
+    margin:15px 8px ;
+    text-transform: capitalize ; 
+}
+.navbarClass  .navbarContainer ul li a
+{
+    position: relative;
+    text-decoration: none;
+    color:#fff;
+    padding:3px;
+}
+/* ------------------- first span ------------------------ */
+/* ############# first span : before ############# */
+.navbarClass  .navbarContainer ul li a  span:first-child::before
+{
+    content:"";
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:8px;
+    height:8px;
+    border-top:2px solid #D03447;
+    border-left:2px solid #D03447;
+    opacity: 0 ;
+}
+/* ------------------- first span ------------------------ */
+/* ############# first span : after ############# */
+.navbarClass  .navbarContainer ul li a  span:first-child::after
+{
+    content:"";
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    width:8px;
+    height:8px;
+    border-bottom:2px solid #D03447;
+    border-left:2px solid #D03447;
+    opacity: 0 ;
+}
+ /* ------------------- second span ------------------------ */
+/* ############# second span : before ############# */
+.navbarClass  .navbarContainer ul li a  span:last-child::before
+{
+    content:"";
+    position:absolute;
+    top:0px;
+    right:0px;
+    width:8px;
+    height:8px;
+    border-top:2px solid #D03447;
+    border-right:2px solid #D03447;
+    opacity: 0 ;
+}
+/* ------------------- second span ------------------------ */
+/* ############# second span : after ############# */
+.navbarClass  .navbarContainer ul li a  span:last-child::after
+{
+    content:"";
+    position:absolute;
+    bottom:0px;
+    right:0px;
+    width:8px;
+    height:8px;
+    border-bottom:2px solid #D03447;
+    border-right:2px solid #D03447;
+    opacity: 0 ;
+}
+/*############################## hover on navbar ############################### */
+ /* ------------------- first span ------------------------ */
+/* ############# first span : before ############# */
+.navbarClass  .navbarContainer ul li a:hover  span:first-child::before
+{
+    content:"";
+    position:absolute;
+    top:-10px;
+    left:-10px;
+    width:8px;
+    height:8px;
+    border-top:2px solid #D03447;
+    border-left:2px solid #D03447;
+    transition: 0.2s ;
+    opacity: 1 ;
+}
+/* ############# first span : after ############# */
+.navbarClass  .navbarContainer ul li a:hover  span:first-child::after
+{
+    content:"";
+    position:absolute;
+    bottom:-10px;
+    left:-10px;
+    width:8px;
+    height:8px;
+    border-bottom:2px solid #D03447;
+    border-left:2px solid #D03447;
+    transition: 0.2s ;
+    opacity: 1 ;
+}
+ /* ------------------- second span ------------------------ */
+/* ############# second span : before ############# */
+.navbarClass  .navbarContainer ul li a:hover  span:last-child::before
+{
+    content:"";
+    position:absolute;
+    top:-10px;
+    right:-10px;
+    width:8px;
+    height:8px;
+    border-top:2px solid #D03447;
+    border-right:2px solid #D03447;
+    transition: 0.2s ;
+    opacity: 1 ;
+}
+/* ------------------- second span ------------------------ */
+/* ############# second span : after ############# */
+.navbarClass  .navbarContainer ul li a:hover  span:last-child::after
+{
+    content:"";
+    position:absolute;
+    bottom:-10px;
+    right:-10px;
+    width:8px;
+    height:8px;
+    border-bottom:2px solid #D03447;
+    border-right:2px solid #D03447;
+    transition: 0.2s ;
+    opacity: 1 ;
+}
+.navbarClass  .navbarContainer .inputClass
+{
+    display: none ;
+}
+/* navbarClass هيتحرك بحرية بالنسبة لل label ال */
+.navbarClass 
+{
+    position:relative;
+}
+.navbarClass  .navbarContainer .labelClass
+{
+    position: absolute;
+    top:15px;
+    right:10px;
+    width:30px;
+    height:30px;
+    padding:25px;
+    background-size: cover;
+    background-image: url('../images/open.png');
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: none;
+}
+.navbarClass .navbarContainer input:checked  ~  .labelClass
+{
+    background-image: url('../images/close.png');
+}
+/* في صف لوحده <li> , logo هيظهرهم وهيظهر كل menubar button هيكونوا مخفين ولما اضغط علي ال navbar and logo ال */
+.navbarClass .navbarContainer input:checked  ~  .leftLinksClass   ul   li  ,
+.navbarClass .navbarContainer input:checked  ~  .rightLinksClass  ul   li  ,
+.navbarClass .navbarContainer input:checked  ~  .logoClass   p
+{
+    display: block;
+    float:none;
+} 
+/* ----------------------------------- Responsive : media query of navbar -------------------------------------------- */
+@media( max-width:1000px )
+{
+    .navbarClass  .navbarContainer .labelClass
+    {
+        display: block;
+    }
+    .navbarClass  .navbarContainer  .leftLinksClass    ,
+    .navbarClass  .navbarContainer  .rightLinksClass   ,
+    .navbarClass  .navbarContainer  .logoClass             
+    {
+        width: 100%;
+        float: none;
+       text-align: center;
+    }
+    /* هياخذ الصف الثالث كله right <li> هياخذ الصف كله و كل logo هتاخذ الصف كله وال left <li> كل */
+    .navbarClass  .navbarContainer .leftLinksClass  ul  li ,
+    .navbarClass  .navbarContainer .rightLinksClass ul  li 
+    {
+        display: none ;
+        width: 100%;
+        padding: 10px;
+    }    
+/* <li> في اقصي اليسار ولحظة الضغط علي الايقونة هيظهر في صف لوحده ذي ال logo في حالة الشاشة الصغيرة هيتم اظهار ال */
+    .navbarClass  .navbarContainer .logoClass  p
+    {
+        float:left;
+        margin: 0;
+    }
+}
+
+/* ############################################## start header section #############################################  */
+.header
+{
+    position: relative ;
+    margin: 0;
+    padding: 0 ;
+    background-image: url("../images/back6.jpg");
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:600px ;
+	/* border: 2px solid #ff0; */
+}
+.header .headerContainer
+{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    /* عشان يجي في منتصف الصفحة */
+    transform: translate(-50%,-60%);
+    text-align: center ;
+}
+.header .headerContainer h2
+{
+    /* navbar وال header عشان ميكنش فيه مسافة بين ال */
+    margin: 0;
+    color:#fff;
+    text-transform: capitalize;
+    font-size:80px;
+}
+.header .headerContainer p
+{
+    margin-top: 0 ; 
+    color:#fff;
+    font-size:35px;
+    text-transform: capitalize;
+}
+.header .headerContainer p span
+{
+    color:#D03447;
+}
+/* ----------------------------------- Responsive : media query of navbar ------------------------------------- */
+@media( min-width:0px )and (max-width:985px )
+{
+    .header .headerContainer h2 ,
+    .header .headerContainer p
+    {
+        display: none;
+    }
+}
+@media( max-width:985px )
+{
+    .header .headerContainer h2
+    {
+        font-size:45px;
+    }
+    .header .headerContainer p
+    {
+        font-size:35px;
+    }
+}
+/* ############################################# end header section ###############################  */
+/* ####################################### start portfolio section ################################  */
+.portfolio
+{
+	 background-color: #000;
+    /* border: 2px solid #f0f;  */
+	 height: auto;
+    /* عشان المحتوي كله يكون موجود بداخله والزيادة يتم حذفها */
+    overflow: hidden;
+}
+.portfolio .portfolioContainer 
+{
+    width:85%;
+	margin: 0 auto ;
+ }
+.portfolio .portfolioContainer .box
+{
+    width:25%;
+    height:auto; 
+    float: left; /* عشان الصور تترتب من الشمال لليمين علي نفس السطر وراء بعض    */
+
+    /* عشان ميكنش فيه مسافة بين الصور وبعضها row بحط هذه الخاصية في ال */
+    font-size:0;
+}
+/* protofolio title h3 */
+.portfolio .portfolioContainer .portfolioTitle h3
+{
+    font-size:45px;
+    text-transform: capitalize ;
+    color: #fff;
+    text-align: left;
+    padding:20px;
+    margin: 0; 
+}
+/* container of each image هذا الكلاس بيمثل كل صورة  */
+.portfolio .portfolioContainer .box .box_container
+{
+    position: relative;
+    cursor: pointer;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+/* overlay layer*/
+.portfolio .portfolioContainer .box  .box_container .box_overlay
+{
+    /*  overlay layer حجم الخط بتاع الكلام اللي موجود داخل ال */
+    font-size: 25px;
+    color:#fff;
+    /* بحرية بالنسبة للديف الاب overlay عشان احرك طبقة ال */
+    position: absolute;
+    /*   top left corner عشان يبدا من ال */
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background-color:rgba(235,84,36,0.5);
+    /*  box of 8box علي اي  hover هخفي هذه الطبقة وهظهره لما اعمل */
+    opacity:0;
+    transition: 0.5s;
+}
+.portfolio .portfolioContainer .box  .box_container .box_overlay span
+{
+    font-size: 15px;
+}
+.portfolio .portfolioContainer .box  .box_container .box_overlay p , 
+.portfolio .portfolioContainer .box  .box_container .box_overlay span 
+{
+    position: absolute ;
+    bottom: 10px ;
+    left:10px;
+    font-weight: bold;
+}
+.portfolio .portfolioContainer .box .box_container img
+{
+    /*  اللي هيه فيه box عشان الصورة تاخذالعرض والطول بتوع ال */
+    width: 100%;
+    height: 100%;
+}
+.clearBoth
+{
+    clear: both;
+}
+/* when hover on overlay layer */
+.portfolio .portfolioContainer .box  .box_container:hover .box_overlay
+{
+    opacity: 1 ;
+}
+/* ------------------------------------- Responsive portfolio section ------------------------------------- */
+/* Extra small screen  rules */
+@media ( min-width:0px) and ( max-width:767px) 	 
+{
+    .portfolio .portfolioContainer .box
+    {
+        width: 100%;
+    }
+}
+/*  small screen  rules  */
+@media ( min-width:770px) and ( max-width:991px) 	 
+{
+    .portfolio .portfolioContainer .box
+     {
+        width: 50%;
+    }
+}
+/*  medium screen  rules  */
+@media ( min-width:992px) and ( max-width:1199px) 	 
+{
+    .portfolio .portfolioContainer .box   .box_container .box_overlay p
+    {
+        font-size:18px;
+    }
+    .portfolio .portfolioContainer .box   .box_container .box_overlay span
+    {
+        font-size:12px;
+    }   
+}
+/* ######################################### start Brand section ############################################ */
+.brand
+{
+	width: 100%;
+	height: auto;
+	/* brand  عشان المحتوي يكون موجود بداخل ال */
+	overflow: hidden;
+	background-color:#000;
+	/* border: 2px solid #0ff; */
+}
+.brand  .brandContainer
+{
+    width: 85%;
+    height: auto;
+    overflow: hidden;
+    margin: 0px auto;
+    padding-top:10px;
+    padding-bottom:8px;
+    /* border: 2px solid rgb(68, 0, 255); */
+	text-align: center;
+}
+.brand  .brandContainer .brandTitle
+{
+    color:#fff;
+}
+/* brand title h3 */
+.brand  .brandContainer .brandTitle  h3
+{
+    font-size:40px;
+    text-transform: capitalize ;
+    color: #fff;
+}
+.brand  .brandContainer .brandBox
+{
+    width:20%;
+    float: left;
+    border: 0.5px solid #222;
+}
+/*  ميكنش سميك brand عشان الخط الفاصل بين كل .brandContainer هينفذ هذا علي العناصر الفردية اللي وخده كلاس 
+    .brand .brandContainer:nth-child(odd)
+*/
+.brand  .brandContainer .brandBox img
+{
+    width:100%;
+}
+/* ------------------------------------- Responsive portfolio section ------------------------------------- */
+/* Extra small screen  rules */
+@media ( min-width:0px) and ( max-width:767px) 	 
+{
+    .brand  .brandContainer .brandBox
+    {
+        width:100%;
+    }
+}
+/*  small screen  rules */
+@media ( min-width:768px) and ( max-width:991px) 	 
+{
+    .brand  .brandContainer .brandBox
+    {
+        width: 50%;
+    }
+}
+/* ###########################################   End Brand section     #######################################  */
+/* ############################################  start about me section ######################################  */
+.aboutMe
+{
+    /* border: 2px solid #f0f; */
+    height: auto;
+    /* عشان المحتوي كله يكون موجود بداخله والزيادة يتم حذفها */
+    overflow: hidden;
+    background-color: #000;
+}
+.aboutMe .aboutMeContainer 	
+{
+    width: 85%;
+    height: auto;
+    /*  container عشان المحتوي يتم وضعه داخل ال */
+    overflow: hidden;
+    /* في المنتصف افقيا و مفيش مسافة راسيا  */
+    margin: 0px auto;
+    padding-top:10px;
+    padding-bottom:8px;
+    /* border: 2px solid rgb(145, 255, 0);  */
+}
+.aboutMe .aboutMeContainer .aboutHeader
+{
+    width: 100%;
+    color:#fff;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom:50px;
+}
+.aboutMe .aboutMeContainer .aboutHeader h2
+{
+    font-size: 40px;
+}
+.aboutMe .aboutMeContainer .aboutMeInfo
+{
+    width: 100%;
+    height:auto;
+    overflow: hidden; 
+    margin-top: 10px;
+    /* border: 2px solid #00f; */
+}
+.aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoImg
+{
+    width:60%;
+    max-width: 66.66%; 
+    float: left;
+    /* بتاع الصورة بحرية بالنسبة للاب dotted frame عشان احرك ال */
+    position: relative;
+    /* border: 2px solid #00f; */
+    padding: 48px 10px ;
+    border-left:2px solid #222; 
+    border-right:2px solid #222; 
+    /* dotts عشان الصورة تظهر فوق ال image frame [ after ] اكبر من ال z-index وخده image بتاع ال container ال*/
+    z-index:0;
+    text-align: center;
+}
+/* style of the dotted frame in bottom right of image */
+.aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoImg::after
+{
+    content:"";
+    position: absolute;
+    bottom:-34px;
+    right:5px ;
+    width:250px;
+    height:250px;
+    background: url('../images/dotted_light.png');    
+    background-repeat: no-repeat;
+    /* وراه وبما ان  فيه جزء .aboutMeInfoImg اللي شايل الصورة اللي واخد كلاس container هتظهر في الطبقة الثانية بعد ال
+    .aboutMeInfoImg فهيكون ظاهر في الامام لان خارج المحتوي اللي واخد كلاسcontainer خارج بره ال image frame من ال
+    */
+    z-index:-1;
+}
+
+/* هذه هي الصورة نفسها */
+.aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoImg img
+{
+    width: 85%;
+}
+.aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoPara
+{
+    float: left;
+    width: 40%;
+    border-right:2px solid #222; 
+    padding: 10px;
+}
+.aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoPara h3
+{
+    font-size: 30px;
+    color: #fff;
+}
+.aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoPara p
+{
+    font-size:16px;
+    text-transform: capitalize;
+    line-height: 2.5 ;
+    color: #DDD;
+    padding-right:63px;
+}
+.aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoPara p span
+{
+    color:#D03447;
+    text-transform: capitalize;
+}
+.aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoPara button
+{
+    padding: 15px;
+    margin-left: 10px;
+    border-radius: 20px;
+    border:2px solid #222 ;
+    background-color: #000 ;
+    color:#fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    /* عشان عند الضغط علي الزر لا يظهر اطار ابيض حوله */
+    outline: 0 ;
+    transition: 0.5s;
+}
+.aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoPara button:hover
+{
+    border:2px solid #D03447 ; 
+    color:#D03447;  
+    /*  0.05 from origial width  بمقدار x لما احط الفارة علي الزرار هيزود عرض الزرار علي محور
+        0.05 from origial height بمقدار Y وهيزود من طول الزرار علي محور
+         
+    */
+    transform: scale(1.05,1.05);
+}
+/* ------------------------------------- Responsive portfolio section ------------------------------------- */
+/* Extra small screen  rules */
+@media ( min-width:0px) and ( max-width:767px) 	 
+{
+    .aboutMe .aboutMeContainer .aboutMeInfo 
+    {
+      /*  border: 2px solid #f00; */
+        text-align: center;
+    }
+   
+    .aboutMe .aboutMeContainer .aboutMeInfo  .aboutMeInfoImg  ,
+    .aboutMe .aboutMeContainer .aboutMeInfo  .aboutMeInfoPara
+    {
+        width:100%;
+        margin:50px auto;
+        /* border:2px solid #0f0; */
+        /*  .aboutMeInfo عشان الصورة والنصوص يظهر في منتصف ال float هلغي ال */
+        float:none;
+        border: 0;
+    }    
+    .aboutMe .aboutMeContainer .aboutMeInfo  .aboutMeInfoImg  img
+    {
+        width:100%;
+    }
+    .aboutMe .aboutMeContainer .aboutMeInfo  .aboutMeInfoPara p
+    {
+        /*  .aboutMeInfoPara عشان النص يظهر في منتصف ال padding هلغي ال */
+        padding: 0 ;
+    }
+    .aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoImg::after
+    {
+        width:0px;
+        height:0px; 
+    }
+
+}
+/*  small screen  rules */
+@media ( min-width:768px) and ( max-width:1082px) 	 
+{
+
+    .aboutMe .aboutMeContainer .aboutMeInfo  .aboutMeInfoImg  ,
+    .aboutMe .aboutMeContainer .aboutMeInfo  .aboutMeInfoPara
+    {
+        width:50%;
+        border:0;
+    }
+    .aboutMe .aboutMeContainer .aboutMeInfo  .aboutMeInfoImg  
+    {
+        border-right: 2px solid #222;
+    }
+    .aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoImg img
+    {
+        width: 100%;
+    }
+    .aboutMe .aboutMeContainer .aboutMeInfo  .aboutMeInfoPara h3
+    {
+        font-size:25px;
+    }
+    .aboutMe .aboutMeContainer .aboutMeInfo  .aboutMeInfoPara p
+    {
+        font-size: 15px;
+    }
+    .aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoImg::after
+    {
+        width:0px;
+        height:0px; 
+    }
+
+}
+/* ######################################### End about me  section #################################  */
+/* ##################################### start my services section #################################  */
+.service
+{
+   /* border: 2px solid #f0f; */
+    height: auto;
+    /* عشان المحتوي كله يكون موجود بداخله والزيادة يتم حذفها */
+    overflow: hidden;
+    background-color: #000;
+}
+.service .serviceContainer
+{
+    width: 85%;
+    height: auto;
+    overflow: hidden;
+    margin: 50px auto ;
+    /* border: 2px solid #f00; */
+}
+.service .serviceContainer .serviceHeader
+{
+    width: 100%;
+    color:#fff;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom:30px ;
+   /* border: 2px solid #0f0; */
+}
+.service .serviceContainer .serviceHeader h2
+{
+    font-size: 40px;
+    color: #fff;
+}
+.service .serviceContainer .serviceInfo .serviceInfoBox  
+{
+    float: left;
+    width:33.3333%;
+    color: #fff;
+    border-left: 2px solid #222;
+    padding-top:30px ;
+    padding-left:35px ;
+    padding-right:35px ;
+    line-height: 1.5 ;
+}
+
+.service .serviceContainer .serviceInfo .serviceInfoBox  img
+{
+    width:15%;
+}
+.service .serviceContainer .serviceInfo .serviceInfoBox  h3
+{
+    text-transform: capitalize;
+}
+.service .serviceContainer .serviceInfo .serviceInfoBox  p
+{
+    color:#999;
+    text-transform: capitalize;
+}
+/* ------------------------------------- Responsive portfolio section ------------------------------------- */
+/* Extra small screen  rules */
+@media ( min-width:0px) and ( max-width:767px) 	 
+{
+    .service .serviceContainer .serviceInfo .serviceInfoBox
+    {
+        text-align: center;
+        width:100%;
+        border:0 ;
+    }
+}
+/*  small screen  rules */
+@media ( min-width:768px) and ( max-width:991px) 	 
+{
+    .service .serviceContainer .serviceInfo .serviceInfoBox
+    {
+        text-align: center;
+        width:50%;
+    }
+}
+/* #################################### End my services section #############################################  */
+/* ########################################## start my skills section     ###################################  */
+.mySkills
+{
+    width:100%;
+    height: auto;
+    /* .mySkills  عشان المحتوي يكون موجود بداخل الديف اللي واخد كلاس */
+    overflow: hidden;
+    background-color: #000;
+    /* border: 2px dotted #ff0;  */
+}
+.mySkills .mySkillsContainer
+{
+    width:85%;
+    height: auto;
+    /* .mySkillsContainer  عشان المحتوي يكون موجود بداخل الديف اللي واخد كلاس */
+    overflow: hidden;
+    margin: 0px auto ;
+    /* border: 2px dashed #0ff;   */
+}
+.mySkills .mySkillsContainer .mySkillsTitle
+{
+    color:#fff;
+    text-align: center ;
+    margin-bottom:80px ;
+}
+.mySkills .mySkillsContainer .mySkillsTitle h2
+{
+    font-size:40px;
+    text-transform: capitalize;
+}
+.mySkills .mySkillsContainer .percentage 
+{
+    float: left;
+    width:25% ;
+    text-align: center;
+    border-right: 1px solid #222;   
+}
+/* .percentage واخد كلاس div عشان اعطي حدود ناحية الشمال لاول */
+.mySkills .mySkillsContainer .percentage:nth-of-type(2)
+{
+    border-left:1px solid #222;   
+}
+.mySkills .mySkillsContainer .percentage h3
+{
+    font-size:45px;
+    margin: 0; 
+    padding: 0; 
+    font-weight: normal;
+    color:#D03447;
+}
+.mySkills .mySkillsContainer .percentage h3 sup
+{
+    font-weight: normal;
+    color:#fff;
+}
+.mySkills .mySkillsContainer .percentage p
+{
+    font-size:11px;
+    margin: 0; 
+    padding: 0; 
+    /* percentage يكون في المنتصف اسفل ال paragraph عشان ال*/
+    padding-right:45px;
+    text-transform: uppercase ;
+    font-weight: bold;
+    color:#fff;
+}
+/* ------------------------------------- Responsive my skills section ------------------------------------- */
+/* Extra small screen  rules */
+@media ( min-width:0px) and ( max-width:767px) 	 
+{
+    .mySkills .mySkillsContainer .percentage 
+    {
+        width: 50%;
+        border:0;
+        padding:40px;
+    }
+    /*   الاولي percentage اللي في ال  border-left  عشان اشيل ال */
+    .mySkills .mySkillsContainer .percentage:nth-child(2)
+    {
+        border: 0;
+    }    
+}
+/* ################################### End my skills section #########################################  */
+/* ################################### start my happy clients section #########################################  */
+
+.myHappy
+{
+    height: auto;
+    overflow: hidden;
+    /* border: 2px solid #0ff; */
+    background-color: #000;
+}
+.myHappy  .myHappyContainer
+{
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+    /* border: 2px solid #00f; */
+    text-align: center;
+    margin: 0 auto ;
+    padding-top:50px;
+    padding-bottom:20px;
+}
+.myHappy  .myHappyContainer .myHappyTitle
+{
+   /*  border: 2px solid #0f0; */
+}
+.myHappy  .myHappyContainer .myHappyTitle h2
+{
+    color:#fff;
+    font-size:35px;
+    text-transform: capitalize;
+}
+
+.myHappy  .myHappyContainer  .myHappyInfo .myHappyParaContainer 
+{
+    /* border: 2px solid #ff0; */
+    height: auto;
+    /* myHappyParaContainer عشان المحتوي يكون موجود بداخل ال */
+    overflow: hidden;
+    color:#fff;
+    background-color: #212121;
+    margin-top: 50px;
+    padding-bottom:80px;
+    /* box-shadow : horizontal  vertial   لون    المسافات من الشمال واليمين     ضباب */
+    box-shadow: 0px 30px 0px -20px #D03447;
+}
+.myHappy  .myHappyContainer  .myHappyInfo .myHappyParaContainer  span
+{
+    display:block;
+    font-size:71px;
+    margin-top:30px;
+    font-family:serif;
+}
+.myHappy  .myHappyContainer  .myHappyInfo .myHappyParaContainer  p
+{
+    font-size:16px;
+    padding-left:97px;
+    padding-right:97px;
+    margin: 0;
+    line-height:2 ;
+    text-transform: capitalize;
+}
+.myHappy  .myHappyContainer  .myHappyInfo  .myHappyPersonOpinion
+{
+    /* عشان احرك الصورة بحرية واخليها في منتصف الخط */
+    position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden; 
+	top:-65px;
+    color:#fff;
+/*    border: 2px solid #0f0; */
+	text-align: center;
+}
+.myHappy  .myHappyContainer  .myHappyInfo  .myHappyPersonOpinion li  Img
+{
+    width:100px;
+    height:100px ;
+    border-radius:50%;
+}
+/* ----------------- ul --------------------- */
+.myHappy  .myHappyContainer  .myHappyInfo  .myHappyPersonOpinion .opinionImgContainer
+{
+	position: relative;
+	top: 0 ;
+	left: 0;
+	top: 25%;
+	width: 300% ;
+	height: auto;
+	overflow: hidden;
+/*	border: 2px solid #f0f;*/
+	transition:2s;
+	list-style: none ;
+	margin: 0 ;
+	padding: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.myHappy  .myHappyContainer  .myHappyInfo  .myHappyPersonOpinion  .opinionImgContainer li
+{
+	position: relative;
+	float: left;
+	top: 0 ;
+	left: 4%;
+	width:25%;
+/*	border: 2px solid #fff;*/
+	padding: 0;
+}
+.myHappy  .myHappyContainer  .myHappyInfo  .myHappyPersonOpinion  .opinionImgContainer li h4     ,
+.myHappy  .myHappyContainer  .myHappyInfo  .myHappyPersonOpinion  .opinionImgContainer li span
+{
+    text-transform: capitalize;
+    margin:5px;
+}
+.myHappy  .myHappyContainer  .myHappyInfo  .myHappyPersonOpinion .opinionImgContainer li h4 
+{
+    color:#ccc;
+    font-size:20px;
+}
+.myHappy  .myHappyContainer  .myHappyInfo  .myHappyPersonOpinion .opinionImgContainer li span
+{
+    color:#555;
+    font-size:13px;
+}
+.myHappy  .myHappyContainer  .myHappyInfo  .myHappyPersonOpinion .myHappySlider
+{
+    text-align: center ;
+    margin-top: 10px;
+}
+.myHappy  .myHappyContainer  .myHappyInfo  .myHappyPersonOpinion .myHappySlider .myHappySliderArrows
+{
+    /* عشان احرك الاسهم بحرية بالنسبة للاب */
+    position: relative;
+    height: auto;
+    /* عشان الاسهم تكون موجودة بداخل الاب بتعها */
+    overflow: hidden;
+/*    border: 2px solid #f00; */
+}
+.myHappy  .myHappyContainer  .myHappyInfo  .myHappyPersonOpinion .myHappySlider .myHappySliderArrows label i
+{
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+/*	border: 2px solid #f00; */
+    cursor: pointer;
+}
+/* slider هذا هو السهم الشمال اللي في ال */
+.myHappy  .myHappyContainer  .myHappyInfo  .myHappyPersonOpinion .myHappySlider .myHappySliderArrows label .fa-chevron-left
+{
+    left:0;
+    top:10px;
+}
+/* slider هذا هو السهم اليمين اللي في ال */
+.myHappy  .myHappyContainer  .myHappyInfo  .myHappyPersonOpinion .myHappySlider .myHappySliderArrows label .fa-chevron-right
+{
+    right:0;
+    top:10px;
+}
+/*------------------------------ Arrows Container ---------------------- */
+.myHappy  .myHappyContainer  .myHappyInfo  .myHappyPersonOpinion .myHappySlider .myHappySliderArrows
+{
+    display: inline-block;
+    width: 100%;
+    color:#fff;
+	padding: 10px;
+/*    border: 2px solid #00f;*/
+}
+.myHappy  .myHappyContainer  .myHappyInfo  .myHappyPersonOpinion .myHappySlider  .myHappySliderBullets label
+{
+    /*  يكونوا جنب بعض three bullets عشان ال */
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    padding:5px	;
+	margin: 5px;
+    background-color:#fff;
+/*    border: 2px solid rgb(0, 255, 0);*/
+    border-radius: 50% ;
+    cursor: pointer;
+}
+.myHappy .myHappyContainer .myHappyInfo  .myHappyPersonOpinion .myHappySlider  .myHappySliderBullets label:hover
+{
+	background-color: #2980b9 ;
+}
+.myHappy .myHappyContainer .myHappyInfo  .myHappyPersonOpinion  #radio1Id:checked ~ .myHappySliderBullets #bullet1Id ,
+.myHappy .myHappyContainer .myHappyInfo  .myHappyPersonOpinion  #radio2Id:checked ~ .myHappySliderBullets #bullet2Id ,
+.myHappy .myHappyContainer .myHappyInfo  .myHappyPersonOpinion  #radio3Id:checked ~ .myHappySliderBullets #bullet3Id
+{
+	background-color: #2980b9 ;
+}
+/* you have to repeat this with each slide ,  25% movement , 100/slidesNum  */
+#radio1Id:checked  ~   .opinionImgContainer
+{
+	transform: translateX(0%);
+}
+#radio2Id:checked  ~   .opinionImgContainer
+{
+	transform: translateX(-25%);
+}
+#radio3Id:checked  ~   .opinionImgContainer
+{
+	transform: translateX(-50%);
+}
+#radio-4:checked  ~   .opinionImgContainer
+{
+	transform: translateX(-75%);
+}
+/* ------------------------------- input bullets ------------------------------- */
+.myHappyPersonOpinion input
+{
+	display: none; 
+}
+/* ------------------------------------- Responsive my skills section ------------------------------------- */
+/* Extra small screen  rules */
+@media ( min-width:0px) and ( max-width:767px) 	 
+{
+    .myHappy  .myHappyContainer  .myHappyInfo .myHappyParaContainer  p
+    {
+        padding-left: 13px; 
+        padding-right: 13px; 
+        font-size: 16px;
+    }
+}
+/* ################################### End my happy clients section #########################################  */
+/*  ########################################## start journal section   ##################################### */
+.journal
+{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: #000;
+    /* border: 2px solid #0f0; */
+}
+.journal  .journalContainer
+{
+    width: 85%;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    /* border: 2px solid #00f; */
+}
+.journal  .journalContainer .journalHeader
+{
+    width: 100%;
+    color:#fff;
+    /* border: 2px solid #ff0; */
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.journal  .journalContainer .journalHeader h2
+{
+    font-size: 40px;
+    margin: 20px ;
+    text-transform: capitalize;
+}
+.journal  .journalContainer  .journal_image_info .boxImage
+{
+    position: relative;
+    width: 33.333%;
+    float: left;
+    height:350px;
+    overflow: hidden;
+    padding: 10px;
+    border-left: 2px solid #222;
+    cursor: pointer;
+    color:#fff;
+}
+/* width الصندوق الاول او الصورة الاولي هتاخذ ضعف ال */
+.journal  .journalContainer  .journal_image_info .boxImage:first-of-type
+{
+    width: 66.666%;
+}
+.journal  .journalContainer  .journal_image_info .boxImage img
+{
+    width: 100%;
+    height: 100%;
+    transition: 0.8s ;
+}
+/*--------------- overlay layer -------------- */
+.journal  .journalContainer  .journal_image_info .boxImage .imgOverlay
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100% ;
+    background-color: rgba(0,0,0,0.6);
+    opacity: 0 ;
+    transition: 0.6s ;
+}
+/*---------------  header , paragraph overlay layer -------------- */
+.journal  .journalContainer  .journal_image_info .boxImage .imgOverlay h3  ,
+.journal  .journalContainer  .journal_image_info .boxImage .imgOverlay p
+{
+    position: absolute ;
+    text-transform: capitalize ;
+    padding-left:25px;
+    padding-right:25px;
+    line-height: 1.5 ;
+}
+
+.journal  .journalContainer  .journal_image_info .boxImage .imgOverlay h3 
+{
+    bottom:25px;   
+}
+.journal  .journalContainer  .journal_image_info .boxImage .imgOverlay p
+{
+    bottom:10px;
+    color: #666 ;
+    font-size: 14px;
+}
+/*---------------------- when hover on any image box -------------------------------- */
+.journal  .journalContainer  .journal_image_info .boxImage:hover .imgOverlay
+{
+    opacity:1;
+}
+/* ------------------------------------- Responsive journal  section ------------------------------------- */
+/* Extra small screen  rules */
+@media ( min-width:0px) and ( max-width:767px) 	 
+{
+    .journal  .journalContainer  .journal_image_info .boxImage
+    {
+        width: 100%;
+        border:0;
+        padding:10px;
+    }
+    .journal  .journalContainer  .journal_image_info .boxImage:first-of-type
+    {
+        width: 100%;
+    }
+    .journal  .journalContainer  .journal_image_info .boxImage .imgOverlay h3 
+    {
+        font-size: 16px;
+        bottom:25px;   
+    }
+    .journal  .journalContainer  .journal_image_info .boxImage .imgOverlay p
+    {
+        bottom:10px;
+        color: #666 ;
+        font-size: 14px;
+    } 
+}
+/*  small screen  rules */
+@media ( min-width:768px) and ( max-width:1200px) 	 
+{
+    .journal  .journalContainer  .journal_image_info .boxImage
+    {
+        width: 50%;
+        border:0;
+        padding:10px;
+    }
+    /* .boxImage اول عنصر ليه كلاس اسمه */
+    .journal  .journalContainer  .journal_image_info .boxImage:first-of-type
+    {
+        width: 50%;
+    }
+    .journal  .journalContainer  .journal_image_info .boxImage .imgOverlay h3 
+    {
+        font-size: 16px;
+        bottom:25px;   
+    }
+    .journal  .journalContainer  .journal_image_info .boxImage .imgOverlay p
+    {
+        bottom:10px;
+        color: #666 ;
+        font-size: 14px;
+    }
+}
+/*  ########################################## end journal section      ######################################### */
+/*  ########################################## start get in touch section   ##################################### */
+.getInTouch
+{
+    /* هياخذ كل العرض بتاع الاب يعني العرض بتاع الصفحة كلها */
+    width:100%;
+    height: auto;
+    overflow: hidden;
+    /* border:2px solid #f00; */
+    background-color: #000;
+    color:#fff;
+}
+.getInTouch  .getInTouchContainer 
+{
+    width:85%;
+    height: auto;
+    overflow: hidden;
+    margin: 50px auto;
+    padding-bottom:50px;
+    /* border:2px solid #00f; */
+}
+.getInTouch  .getInTouchContainer  .getInTouchHeader
+{
+    text-align: center;
+    margin-bottom: 50px;
+    /* border: 2px solid #0f0; */
+}
+.getInTouch  .getInTouchContainer  .getInTouchHeader h2
+{
+    font-size: 35px;
+    text-transform: capitalize;
+}
+/* form   */
+.getInTouch  .getInTouchContainer  .getInTouchInfo 
+{
+    width: 60%;
+    float:left;
+    border-left: 1px solid #555;
+    padding-bottom:80px;
+}
+.getInTouch  .getInTouchContainer  form .nameEmailForm
+{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+   /* border: 2px solid #f00; */
+}
+.getInTouch  .getInTouchContainer  form .nameEmailForm  input[type=text] ,
+.getInTouch  .getInTouchContainer  form .nameEmailForm  input[type=email] ,
+.getInTouch  .getInTouchContainer  form   textarea
+{
+    text-transform: uppercase ;
+    /* الخلفية مش هتكون موجودة حيث هتكون شفافة */
+    background-color: transparent;
+    outline: 0 ;
+    border:0;
+    color:#fff;
+    border-bottom: 2px solid #444;
+    padding-bottom:15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.getInTouch  .getInTouchContainer  form .nameEmailForm  input[type=text] ,
+.getInTouch  .getInTouchContainer  form .nameEmailForm  input[type=email]
+{
+    width:45%;
+    float:left;
+    margin-left:5%;
+}
+.getInTouch  .getInTouchContainer  form   textarea
+{
+    width: 95%;
+    margin-top: 40px;
+    margin-left:5%;
+}
+/* ---------------  "send message" button --------------- */
+.getInTouch  .getInTouchContainer  form  input[type=submit]
+{
+    display: block;
+    padding: 15px;
+    margin-left: 30px;
+    margin-top: 30px;
+    background-color: transparent ;
+    border:1px solid #444;
+    color:#fff;
+    text-transform: uppercase;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: 0 ;
+}
+/* --------------- when hover on "send message" button --------------- */
+.getInTouch  .getInTouchContainer  form  input[type=submit]:hover
+{
+    transform:scale(1.05,1.05);
+    border:1px solid #D03447;
+    color:#D03447;
+    transition: 0.5s ;
+}
+/* contact part */
+.getInTouch  .getInTouchContainer  .contact
+{
+    /* width فهيتم خصمهم من ال margin-left لان عندي 10 بيكسل لل */
+    width: 30%;
+    float: right;
+    height: 400px ;
+    margin-left: 10px;
+    border-left : 1px solid #444;
+    border-right: 1px solid #444;
+    padding-left:10px;
+}
+.getInTouch  .getInTouchContainer  .contact span
+{
+    color:#888;
+    text-transform: uppercase ;
+    font-size: 14px;
+}
+.getInTouch  .getInTouchContainer  .contact     p
+{
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+}
+/* ----------------------------------- Responsive : media query of navbar -------------------------------------------- */
+/*  Extra small screen  rules */
+@media( min-width:0px )and (max-width:767px )
+{
+    .getInTouch  .getInTouchContainer  .getInTouchInfo ,
+    .getInTouch  .getInTouchContainer  .contact 
+    {
+        width: 100%;
+        margin-top: 10px;
+        border:0;
+    }
+    .getInTouch  .getInTouchContainer  form .nameEmailForm  input[type=text] ,
+    .getInTouch  .getInTouchContainer  form .nameEmailForm  input[type=email] ,
+    .getInTouch  .getInTouchContainer  form   textarea
+    {
+        width: 100% ;
+        margin: 10px;
+    }
+    .getInTouch  .getInTouchContainer  form   input[type=submit] 
+    {
+        display: block;
+        margin: 30px auto;
+    }
+}
+/*  ########################################## end get in touch  section   ##################################### */
+/*  ##########################################     start footer section     ##################################### */
+.footer
+{
+    width: 100%;
+    /* border: 2px solid #0f0; */
+    height: auto;
+    overflow: hidden ;
+    text-align: center;
+    background-color: #222;
+}
+.footer .footerContainer
+{
+    width: 85%;
+    /* border: 2px solid #00f; */
+    height: auto;
+    overflow: hidden ;
+    margin: 50px auto;
+}
+.footer .footerContainer h3
+{
+    color:#fff;
+    text-transform: capitalize;
+    font-size:35px;
+}
+.footer .footerContainer h3 span
+{
+    font-size: 50px;
+    color: #D03447;
+}
+.footer .footerContainer ul
+{
+    list-style: none ;
+}
+.footer .footerContainer ul  li
+{
+    display: inline-block ;
+    margin: 10px;
+}
+.footer .footerContainer ul  li  a
+{
+    text-decoration: none;
+    color:#888;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.footer .footerContainer    p 
+{
+    color:#888;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.footer .footerContainer    p  span
+{
+    color: #D03447 ;
+}
+/* ----------------------------------- Responsive : media query of navbar -------------------------------------------- */
+/*  Extra small screen  rules */
+@media( min-width:0px )and (max-width:850px )
+{
+    .footer .footerContainer h3
+    {
+        font-size: 25px;   
+    }
+    .footer .footerContainer ul 
+    {
+        margin-top:10px ;
+        margin-right:80px ;
+    }
+    .footer .footerContainer ul li  
+    {
+        width: 100% ;
+        font-size: 14px;   
+    }
+    .footer .footerContainer   p
+    {
+        font-size: 16px;   
+        line-height: 2 ;
+    }   
+   
+}
+/*  ##########################################     end footer section     ######################################### */

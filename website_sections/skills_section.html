@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/vendors/font-awesome.min.css">
+		<style>
+			*
+			{
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+			}
+			/* --------------------------  End : Global Classes style دي الكلاسات الاكثر تكرر -------------------------- */
+			body
+			{
+				margin: 0; 
+				padding: 0;
+				font-family: sans-serif;
+			}
+			/* ################################### start my skills section ###################################  */
+			.mySkills
+			{
+				width:100%;
+				height: auto;
+				/* .mySkills  عشان المحتوي يكون موجود بداخل الديف اللي واخد كلاس */
+				overflow: hidden;
+				background-color: #000;
+				/* border: 2px dotted #ff0;  */
+			}
+			.mySkills .mySkillsContainer
+			{
+				width:85%;
+				height: auto;
+				/* .mySkillsContainer  عشان المحتوي يكون موجود بداخل الديف اللي واخد كلاس */
+				overflow: hidden;
+				margin: 50px auto ;
+				/* border: 2px dashed #0ff;   */
+			}
+			.mySkills .mySkillsContainer .mySkillsTitle
+			{
+				color:#fff;
+				text-align: center ;
+				margin-bottom:80px ;
+			}
+			.mySkills .mySkillsContainer .mySkillsTitle h2
+			{
+				font-size:40px;
+				text-transform: capitalize;
+			}	
+			.mySkills .mySkillsContainer .percentage 
+			{
+				float: left;
+				width:25% ;
+				text-align: center;
+				border-right: 1px solid #222;   
+			}
+			/* .percentage واخد كلاس div عشان اعطي حدود ناحية الشمال لاول */
+			.mySkills .mySkillsContainer .percentage:nth-of-type(2)
+			{
+				border-left:1px solid #222;   
+			}
+			.mySkills .mySkillsContainer .percentage h3
+			{
+				font-size:45px;
+				margin: 0; 
+				padding: 0; 
+				font-weight: normal;
+				color:#D03447;
+			}
+			.mySkills .mySkillsContainer .percentage h3 sup
+			{
+				font-weight: normal;
+				color:#fff;
+			}
+			.mySkills .mySkillsContainer .percentage p
+			{
+				font-size:11px;
+				margin: 0; 
+				padding: 0; 
+				/* percentage يكون في المنتصف اسفل ال paragraph عشان ال*/
+				padding-right:45px;
+				text-transform: uppercase ;
+				font-weight: bold;
+				color:#fff;
+			}
+			/* ------------------------------------- Responsive my skills section ------------------------------- */
+			/* Extra small screen  rules */
+			@media ( min-width:0px) and ( max-width:767px) 	 
+			{
+				.mySkills .mySkillsContainer .percentage 
+				{
+					width: 50%;
+					border:0;
+					padding:40px;
+				}
+				/*   الاولي percentage اللي في ال  border-left  عشان اشيل ال */
+				.mySkills .mySkillsContainer .percentage:nth-child(2)
+				{
+					border: 0;
+				}    
+			}
+			/* ############################ End my skills section ##############################################  */
+		</style>
+    </head>
+    <body>
+		<!-- ########################################## start my skills section ################################ -->
+		<div class="mySkills">
+			<div class="mySkillsContainer">
+				<div class="mySkillsTitle">
+					<h2>my skills</h2>
+					<img src="../images/divider.png">
+				</div>
+				<div class="percentage">
+					<h3>90 <sup>&percnt;</sup> </h3>
+					<p>wordpress</p>
+				</div>
+				<div class="percentage">
+					<h3>99 <sup>&percnt;</sup> </h3>
+					<p>html/css</p>
+				</div>
+				<div class="percentage">
+					<h3>95 <sup>&percnt;</sup> </h3>
+					<p>jquery</p>
+				</div>
+				<div class="percentage">
+					<h3>100 <sup>&percnt;</sup> </h3>
+					<p>design</p>
+				</div>
+			</div>
+		</div>
+		<!-- ######################################### End my skills section ################################# -->
+	</body>
+</html>

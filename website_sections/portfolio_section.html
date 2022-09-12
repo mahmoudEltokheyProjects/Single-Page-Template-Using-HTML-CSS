@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/vendors/font-awesome.min.css">
+		<style>
+		*
+		{
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+		}
+		/* --------------------------  start : Global Classes style دي الكلاسات الاكثر تكرر -------------------------- */
+		.box_overlay
+		{
+			/* بحرية بالنسبة للديف الاب overlay عشان احرك طبقة ال */
+			position: absolute;
+			/*   top left corner عشان يبدا من ال */
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			background-color:rgba(0,0,0,0.6);
+		}
+		/* --------------------------  End : Global Classes style دي الكلاسات الاكثر تكرر -------------------------- */
+		body
+		{
+			margin: 0; 
+			padding: 0;
+			font-family: sans-serif;
+		}
+		/* ####################################### start portfolio section ################################  */
+		.portfolio
+		{
+			 background-color: #000;
+			/* border: 2px solid #f0f;  */
+			 height: auto;
+			/* عشان المحتوي كله يكون موجود بداخله والزيادة يتم حذفها */
+			overflow: hidden;
+		}
+		.portfolio .portfolioContainer 
+		{
+			width:85%;
+			margin: 0 auto ;
+		 }
+		.portfolio .portfolioContainer .box
+		{
+			width:25%;
+			height:auto; 
+			float: left; /* عشان الصور تترتب من الشمال لليمين علي نفس السطر وراء بعض    */
+
+			/* عشان ميكنش فيه مسافة بين الصور وبعضها row بحط هذه الخاصية في ال */
+			font-size:0;
+		}
+		/* protofolio title h3 */
+		.portfolio .portfolioContainer .portfolioTitle h3
+		{
+			font-size:45px;
+			text-transform: capitalize ;
+			color: #fff;
+			text-align: left;
+			padding:20px;
+			margin: 0; 
+		}
+		/* container of each image هذا الكلاس بيمثل كل صورة  */
+		.portfolio .portfolioContainer .box .box_container
+		{
+			position: relative;
+			cursor: pointer;
+			margin-left: 10px;
+			margin-bottom: 10px;
+		}
+		/* overlay layer*/
+		.portfolio .portfolioContainer .box  .box_container .box_overlay
+		{
+			/*  overlay layer حجم الخط بتاع الكلام اللي موجود داخل ال */
+			font-size: 25px;
+			color:#fff;
+			/* بحرية بالنسبة للديف الاب overlay عشان احرك طبقة ال */
+			position: absolute;
+			/*   top left corner عشان يبدا من ال */
+			top:0;
+			left:0;
+			bottom:0;
+			right:0;
+			background-color:rgba(235,84,36,0.5);
+			/*  box of 8box علي اي  hover هخفي هذه الطبقة وهظهره لما اعمل */
+			opacity:0;
+			transition: 0.5s;
+		}
+		.portfolio .portfolioContainer .box  .box_container .box_overlay span
+		{
+			font-size: 15px;
+		}
+		.portfolio .portfolioContainer .box  .box_container .box_overlay p , 
+		.portfolio .portfolioContainer .box  .box_container .box_overlay span 
+		{
+			position: absolute ;
+			bottom: 10px ;
+			left:10px;
+			font-weight: bold;
+		}
+		.portfolio .portfolioContainer .box .box_container img
+		{
+			/*  اللي هيه فيه box عشان الصورة تاخذالعرض والطول بتوع ال */
+			width: 100%;
+			height: 100%;
+		}
+		.clearBoth
+		{
+			clear: both;
+		}
+		/* when hover on overlay layer */
+		.portfolio .portfolioContainer .box  .box_container:hover .box_overlay
+		{
+			opacity: 1 ;
+		}
+		/* ------------------------------------- Responsive portfolio section ------------------------------------- */
+		/* Extra small screen  rules */
+		@media ( min-width:0px) and ( max-width:767px) 	 
+		{
+			.portfolio .portfolioContainer .box
+			{
+				width: 100%;
+			}
+		}
+		/*  small screen  rules  */
+		@media ( min-width:770px) and ( max-width:991px) 	 
+		{
+			.portfolio .portfolioContainer .box
+			 {
+				width: 50%;
+			}
+		}
+		/*  medium screen  rules  */
+		@media ( min-width:992px) and ( max-width:1199px) 	 
+		{
+			.portfolio .portfolioContainer .box   .box_container .box_overlay p
+			{
+				font-size:18px;
+			}
+			.portfolio .portfolioContainer .box   .box_container .box_overlay span
+			{
+				font-size:12px;
+			}   
+		}
+		</style>
+    </head>
+    <body>
+		<!-- ################################## start portfolio section ################################ -->
+        <div class="portfolio">
+            <div class="portfolioContainer">
+                <div class="portfolioTitle">
+                    <h3>portfolio</h3>
+                </div> 
+                <!-- ************************** box 1 ************************** -->
+                <div class="box">
+                    <!-- product 1 -->
+                    <div class="box_container">
+                        <div class="box_overlay">
+                            <p>product one</p>
+                            <span>web , braning</span>
+                        </div>
+                        <img src="../images/portfolioImages/img1_1.jpeg" alt="img1 not found" name="box1Img1Name">
+                    </div>
+                    <!-- product 2 -->
+                    <div class="box_container">
+                        <div class="box_overlay">
+                            <p>product one</p>
+                            <span>web planning</span>
+                        </div>
+                        <img src="../images/portfolioImages/img2_1.jpeg" alt="img2 not found" name="box1Imge2Name">
+                    </div>
+                    <!-- product 3 -->
+                    <div class="box_container">
+                        <div class="box_overlay">
+                            <p>product one</p>
+                            <span>web planning</span>
+                        </div>
+                        <img src="../images/portfolioImages/img3_1.jpeg"  alt="img3 not found"name="box1Img3Name">
+                    </div>
+                </div>
+                <!-- ************************** box 2 ************************** -->
+                <div class="box">
+                    <!-- product 1 -->
+                    <div class="box_container">
+                        <div class="box_overlay">
+                            <p>product one</p>
+                            <span>web planning</span>
+                        </div>
+                        <img src="../images/portfolioImages/img1_2.jpeg"  alt="img1 not found"name="box2Img1Name">
+                    </div>
+                    <!-- product 2 -->
+                    <div class="box_container">
+                        <div class="box_overlay">
+                            <p>product one</p>
+                            <span>web planning</span>
+                        </div>
+                        <img src="../images/portfolioImages/img2_2.jpeg" alt="img2 not found"name="box2Img2Name">
+                    </div>
+                    <!-- product 3 -->
+                    <div class="box_container">
+                        <div class="box_overlay">
+                            <p>product one</p>
+                            <span>web planning</span>
+                        </div>
+                        <img src="../images/portfolioImages/img3_2.jpeg" alt="img3 not found"name="box2Img3Name">
+                    </div>
+                </div> 
+                <!-- ************************** box 3 ************************** -->
+                <div class="box">
+                    <!-- product 1 -->
+                    <div class="box_container">
+                        <div class="box_overlay">
+                            <p>product one</p>
+                            <span>web planning</span>
+                        </div>
+                        <img src="../images/portfolioImages/img1_3.jpeg"  alt="img1 not found"name="box3Img1Name">
+                    </div>
+                    <!-- product 2 -->
+                    <div class="box_container">
+                        <div class="box_overlay">
+                            <p>product one</p>
+                            <span>web planning</span>
+                        </div>
+                        <img src="../images/portfolioImages/img2_3.jpeg" alt="img2 not found"name="box3Img2Name">
+                    </div>
+                    <!-- product 3 -->
+                    <div class="box_container">
+                        <div class="box_overlay">
+                            <p>product one</p>
+                            <span>web planning</span>
+                        </div>
+                        <img src="../images/portfolioImages/img3_3.jpeg" alt="img3 not found" name="box3Img3Name">
+                    </div>
+                </div>
+                <!-- ************************** box 4 ************************** -->
+                <div class="box">
+                    <!-- product 1 -->
+                    <div class="box_container">
+                        <div class="box_overlay">
+                            <p>product one</p>
+                            <span>web planning</span>
+                        </div>
+                        <img src="../images/portfolioImages/img1_4.jpeg"  alt="img1 not found"name="box3Img1Name">
+                    </div>
+                    <!-- product 2 -->
+                    <div class="box_container">
+                        <div class="box_overlay">
+                            <p>product one</p>
+                            <span>web planning</span>
+                        </div>
+                        <img src="../images/portfolioImages/img2_4.jpeg" alt="img2 not found"name="box3Img2Name">
+                    </div>
+                    <!-- product 3 -->
+                    <div class="box_container">
+                        <div class="box_overlay">
+                            <p>product one</p>
+                            <span>web planning</span>
+                        </div>
+                        <img src="../images/portfolioImages/img3_4.jpeg" alt="img3 not found" name="box3Img3Name">
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- #########################################  End portfolio section ######################################  -->
+	</body>
+</html>

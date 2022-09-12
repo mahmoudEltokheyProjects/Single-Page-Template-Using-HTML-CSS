@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>navbar section </title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/vendors/font-awesome.min.css">
+		<style>
+			*
+			{
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+			}
+			/* --------------------------  start : Global Classes style دي الكلاسات الاكثر تكرر -------------------------- */
+			.box_overlay
+			{
+				/* بحرية بالنسبة للديف الاب overlay عشان احرك طبقة ال */
+				position: absolute;
+				/*   top left corner عشان يبدا من ال */
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				background-color:rgba(0,0,0,0.6);
+			}
+			/* --------------------------  End : Global Classes style دي الكلاسات الاكثر تكرر -------------------------- */
+			body
+			{
+				margin: 0; 
+				padding: 0;
+				font-family: sans-serif;
+				height: 2500px;
+			}
+			.navbarClass
+			{
+				background-color: #000;
+				/* border: 2px solid #f00;  */
+			}
+			.navbarClass  .navbarContainer
+			{
+				width: 85%;
+				height: auto;
+				/*  container عشان المحتوي يتم وضعه داخل ال */
+				overflow: hidden;
+				/* في المنتصف افقيا و مفيش مسافة راسيا  */
+				margin: 0px auto;
+				padding-top:10px;
+				padding-bottom:8px;
+				/* border:2px solid #0ff; */
+			}
+			.navbarClass  .navbarContainer .leftLinksClass ,
+			.navbarClass  .navbarContainer .rightLinksClass
+			{
+				width:40%;
+				display: inline-block;
+			}
+			.navbarClass  .navbarContainer .leftLinksClass 
+			{
+				float: left;
+				text-align: right;
+			}
+			.navbarClass  .navbarContainer .rightLinksClass
+			{
+				float: right;
+				text-align: left;
+			}
+			.navbarClass  .navbarContainer .logoClass
+			{
+				width: 20% ;
+			   /* border: 2px solid #0f0; */
+				display: inline-block;
+				text-align: center;
+				font-weight: bold;
+			}
+			.navbarClass  .navbarContainer .logoClass p
+			{
+				text-transform: capitalize ; 
+				font-size:24px;
+				color: #fff;
+				margin:10px;
+			}
+			.navbarClass  .navbarContainer .logoClass p span
+			{
+				color:#D03447;
+			}
+			.navbarClass  .navbarContainer ul
+			{
+				list-style: none;
+				margin: 0 ;
+				padding:0 ;
+			}
+			.navbarClass  .navbarContainer ul li
+			{
+				display: inline-block ;
+				margin:15px 8px ;
+				text-transform: capitalize ; 
+			}
+			.navbarClass  .navbarContainer ul li a
+			{
+				position: relative;
+				text-decoration: none;
+				color:#fff;
+				padding:3px;
+			}
+			/* ------------------- first span ------------------------ */
+			/* ############# first span : before ############# */
+			.navbarClass  .navbarContainer ul li a  span:first-child::before
+			{
+				content:"";
+				position:absolute;
+				top:0px;
+				left:0px;
+				width:8px;
+				height:8px;
+				border-top:2px solid #D03447;
+				border-left:2px solid #D03447;
+				opacity: 0 ;
+			}
+			/* ------------------- first span ------------------------ */
+			/* ############# first span : after ############# */
+			.navbarClass  .navbarContainer ul li a  span:first-child::after
+			{
+				content:"";
+				position:absolute;
+				bottom:0px;
+				left:0px;
+				width:8px;
+				height:8px;
+				border-bottom:2px solid #D03447;
+				border-left:2px solid #D03447;
+				opacity: 0 ;
+			}
+			 /* ------------------- second span ------------------------ */
+			/* ############# second span : before ############# */
+			.navbarClass  .navbarContainer ul li a  span:last-child::before
+			{
+				content:"";
+				position:absolute;
+				top:0px;
+				right:0px;
+				width:8px;
+				height:8px;
+				border-top:2px solid #D03447;
+				border-right:2px solid #D03447;
+				opacity: 0 ;
+			}
+			/* ------------------- second span ------------------------ */
+			/* ############# second span : after ############# */
+			.navbarClass  .navbarContainer ul li a  span:last-child::after
+			{
+				content:"";
+				position:absolute;
+				bottom:0px;
+				right:0px;
+				width:8px;
+				height:8px;
+				border-bottom:2px solid #D03447;
+				border-right:2px solid #D03447;
+				opacity: 0 ;
+			}
+			/*############################## hover on navbar ############################### */
+			 /* ------------------- first span ------------------------ */
+			/* ############# first span : before ############# */
+			.navbarClass  .navbarContainer ul li a:hover  span:first-child::before
+			{
+				content:"";
+				position:absolute;
+				top:-10px;
+				left:-10px;
+				width:8px;
+				height:8px;
+				border-top:2px solid #D03447;
+				border-left:2px solid #D03447;
+				transition: 0.2s ;
+				opacity: 1 ;
+			}
+			/* ############# first span : after ############# */
+			.navbarClass  .navbarContainer ul li a:hover  span:first-child::after
+			{
+				content:"";
+				position:absolute;
+				bottom:-10px;
+				left:-10px;
+				width:8px;
+				height:8px;
+				border-bottom:2px solid #D03447;
+				border-left:2px solid #D03447;
+				transition: 0.2s ;
+				opacity: 1 ;
+			}
+			 /* ------------------- second span ------------------------ */
+			/* ############# second span : before ############# */
+			.navbarClass  .navbarContainer ul li a:hover  span:last-child::before
+			{
+				content:"";
+				position:absolute;
+				top:-10px;
+				right:-10px;
+				width:8px;
+				height:8px;
+				border-top:2px solid #D03447;
+				border-right:2px solid #D03447;
+				transition: 0.2s ;
+				opacity: 1 ;
+			}
+			/* ------------------- second span ------------------------ */
+			/* ############# second span : after ############# */
+			.navbarClass  .navbarContainer ul li a:hover  span:last-child::after
+			{
+				content:"";
+				position:absolute;
+				bottom:-10px;
+				right:-10px;
+				width:8px;
+				height:8px;
+				border-bottom:2px solid #D03447;
+				border-right:2px solid #D03447;
+				transition: 0.2s ;
+				opacity: 1 ;
+			}
+			.navbarClass  .navbarContainer .inputClass
+			{
+				display: none ;
+			}
+			/* navbarClass هيتحرك بحرية بالنسبة لل label ال */
+			.navbarClass 
+			{
+				position:relative;
+			}
+			.navbarClass  .navbarContainer .labelClass
+			{
+				position: absolute;
+				top:15px;
+				right:10px;
+				width:30px;
+				height:30px;
+				padding:25px;
+				background-size: cover;
+				background-image: url('../images/open.png');
+				background-repeat: no-repeat;
+				cursor: pointer;
+				display: none;
+			}
+			.navbarClass .navbarContainer input:checked  ~  .labelClass
+			{
+				background-image: url('../images/close.png');
+			}
+			/* في صف لوحده <li> , logo هيظهرهم وهيظهر كل menubar button هيكونوا مخفين ولما اضغط علي ال navbar and logo ال */
+			.navbarClass .navbarContainer input:checked  ~  .leftLinksClass   ul   li  ,
+			.navbarClass .navbarContainer input:checked  ~  .rightLinksClass  ul   li  ,
+			.navbarClass .navbarContainer input:checked  ~  .logoClass   p
+			{
+				display: block;
+				float:none;
+			} 
+			/* ----------------------------------- Responsive : media query of navbar -------------------------------------------- */
+			@media( max-width:985px )
+			{
+				.navbarClass  .navbarContainer .labelClass
+				{
+					display: block;
+				}
+				.navbarClass  .navbarContainer  .leftLinksClass    ,
+				.navbarClass  .navbarContainer  .rightLinksClass   ,
+				.navbarClass  .navbarContainer  .logoClass             
+				{
+					width: 100%;
+					float: none;
+				   text-align: center;
+				}
+				/* هياخذ الصف الثالث كله right <li> هياخذ الصف كله و كل logo هتاخذ الصف كله وال left <li> كل */
+				.navbarClass  .navbarContainer .leftLinksClass  ul  li ,
+				.navbarClass  .navbarContainer .rightLinksClass ul  li 
+				{
+					display: none ;
+					width: 100%;
+					padding: 10px;
+				}    
+			/* <li> في اقصي اليسار ولحظة الضغط علي الايقونة هيظهر في صف لوحده ذي ال logo في حالة الشاشة الصغيرة هيتم اظهار ال */
+				.navbarClass  .navbarContainer .logoClass  p
+				{
+					float:left;
+					margin: 0;
+				}
+			}
+
+		</style>
+    </head>
+    <body>
+		<!-- ################################## start navbar section ################################## -->
+        <div class="navbarClass">
+            <div class="navbarContainer">
+                <!-- menubar of navbar  -->
+                <input type="checkbox"class="inputClass"id="inputId">
+                <label for="inputId"class="labelClass"></label>       
+                <!-- left links -->
+                <div class="leftLinksClass">
+                    <ul>
+                        <li> <a href="#">home <span></span><span></span>      </a></li>
+                        <li> <a href="#">protofolio<span></span><span></span> </a></li>
+                        <li> <a href="#">about<span></span><span></span>      </a></li>
+                        <li> <a href="#">services<span></span><span></span>   </a></li>
+                    </ul>
+                    </div>
+                <!-- logo  -->
+                <div class="logoClass">
+                    <p>eltokhey<span>.inc</span></p>   
+                </div>
+                <!-- right links -->
+                <div class="rightLinksClass">
+                    <ul>
+                        <li><a href="#">skills<span></span><span></span>       </a></li>
+                        <li><a href="#">testimonials<span></span><span></span> </a></li>
+                        <li><a href="#">journal<span></span><span></span>      </a></li>
+                        <li><a href="#">contact<span></span><span></span>      </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    	<!-- ################################## End navbar section  ################################# --> 
+    </body>
+</html> 

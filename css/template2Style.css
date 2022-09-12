@@ -1,0 +1,265 @@
+/* Global الحاجات اللي هتتنفذ علي كل العناصر */
+*
+{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box ;
+    -webkit-box-sizing: border-box ;
+}
+body
+{
+    margin: 0 ;
+    padding: 0 ;
+    font-family: sans-serif;
+    background-color: #000;
+    color:#fff;
+    height: 1000px ; 
+}
+.navContainer
+{
+    /* margin:top botom right left */
+    width: 100%;
+    height:auto ; 
+}
+
+.navContainer .navRow
+{
+    /* لثلاث اقسام واتحكم فيه بحرية navabar عشان اقسم الصف بتاع ال */
+    display: flex ;
+}
+/* ####################################### start navbar ####################################### */
+/* left navbar links */
+.navContainer .navRow .leftList
+{
+    text-align: right;
+}
+/* right navbar links */
+.navContainer .navRow .rightList
+{
+    text-align: left;
+}
+/* left navbar links */
+/* right  navbar links */
+.navContainer .navRow .leftList ,
+.navContainer .navRow .rightList
+{
+    /* 40% from row width اللينكات اللي علي الشمال هتاخذ */
+    flex: 40%;
+    /* للينكات اللي علي الشمال هو %40 width هخلي اقصي */
+    max-width: 40% ;
+    text-transform: capitalize;
+}
+/* logo  */
+.navContainer .navRow .logoClass
+{
+    /* 20% from row width اللوجو هتاخذ */
+    flex: 20%;
+    max-width: 20% ;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    text-transform: capitalize;
+}
+/* logo  */
+.navContainer .navRow .logoClass span
+{
+    color:#D03447;
+}
+.navContainer .navRow .leftList  ul ,
+.navContainer .navRow .rightList ul 
+{
+  list-style: none ;   
+  padding: 0 ;
+}
+/* items of left navbar links */
+/* items of right  navbar links */
+.navContainer .navRow .leftList  ul li  ,
+.navContainer .navRow .rightList ul li 
+{
+    /* style عشان اللينكات تيجي جنب بعض وفي نفس الوقت تاخذ */
+    display: inline-block;
+}
+/* links of left navbar links */
+/* links of right  navbar links */
+.navContainer .navRow .leftList  ul li  a ,
+.navContainer .navRow .rightList ul li  a
+{
+    text-decoration:none;
+    float: left;
+    margin-right: 10px;
+    padding: 5px;
+    color:#fff;
+    /* اللي بداخله يتحركوا بحرية بالنسبة له two span عشان ال */
+    position: relative;
+}
+/* when hover on any link , it will appear 4 corners 
+1-
+  two corner حيث هعمل before , after بنعمله بال effect اي 
+ two cornerوال beforeبال top_left , bottom left اللي في ال 
+   top_right , bottom_right  حيث afterالاخري بال
+2- after وال befor وهتحكم فيهم بال navbar في ال <a> داخل كل two span هعمل
+3-  يعني الابن هيظهر بعد الاب after يعني الابن هيظهر قبل الاب ومعني كلمة before معني كلمة
+4- opacity=0 هعمل له cornerعليه فكل hover وهظهره لما اعمل navbar links اللي انا عملته علي ال effect هخفي ال
+*/
+
+/* ---------------------------------- first span inside <a> ------------------------------*/
+/* ####### top_left_corner span [ apply "befor" on first span inside <a> ] ####### */
+/* ------------------- before span ------------------ */
+.navContainer .navRow  ul li  a span:first-child::before
+{
+    content:"";
+    /* 
+       position:relative فلازم اعطي الاب position:absolute فلازم اعطي الاب طالما اعطيت الابن
+       <a> هو ال span عشان يتحرك بحرية بالنسبة للاب والاب بتاع ال
+    */
+    position: absolute;
+    top:0;
+    left:0;
+    width:8px;
+    height:8px;
+    /* يتحرك بنعومه hoverعشان لما اعمل عليه */
+    transition: 0.2s;
+    /*  border_top_left واخذ top_left_corner span ال */
+    border-top:2px solid #D03447;
+    border-left:2px solid #D03447;
+    opacity: 0 ;
+} 
+/* ####### top_left_corner span [ apply "after" on first span inside <a> ] ####### */
+/* ------------------- after span ------------------ */
+.navContainer .navRow  ul li  a span:first-child::after
+{
+    content:"";
+    /* 
+       position:relative فلازم اعطي الاب position:absolute فلازم اعطي الاب طالما اعطيت الابن
+       <a> هو ال span عشان يتحرك بحرية بالنسبة للاب والاب بتاع ال
+    */
+    position: absolute;
+    top:0;
+    right:0;
+    width:8px;
+    height:8px;
+    /* يتحرك بنعومه hoverعشان لما اعمل عليه */
+    transition: 0.2s;
+    /*  border_top_left واخذ top_left_corner span ال */
+    border-top:2px solid #D03447;
+    border-right:2px solid #D03447;
+    opacity: 0 ;
+} 
+/* ---------------------------------- second span inside <a> ------------------------------*/
+/* ####### top_left_corner span [ apply "befor" on second span inside <a> ] ####### */
+/* ------------------- before span ------------------ */
+.navContainer .navRow  ul li  a span:last-child::before
+{
+    content:"";
+    /* 
+       position:relative فلازم اعطي الاب position:absolute فلازم اعطي الاب طالما اعطيت الابن
+       <a> هو ال span عشان يتحرك بحرية بالنسبة للاب والاب بتاع ال
+    */
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:8px;
+    height:8px;
+    /* يتحرك بنعومه hoverعشان لما اعمل عليه */
+    transition: 0.2s;
+    /*  border_top_left واخذ top_left_corner span ال */
+    border-bottom:2px solid #D03447;
+    border-left:2px solid #D03447;
+    opacity: 0 ;
+} 
+/* ####### bottom_right span [ apply "after" on second span inside <a> ] ####### */
+/* ------------------- after span ------------------ */
+.navContainer .navRow  ul li  a span:last-child::after
+{
+    content:"";
+    /* 
+       position:relative فلازم اعطي الاب position:absolute فلازم اعطي الاب طالما اعطيت الابن
+       <a> هو ال span عشان يتحرك بحرية بالنسبة للاب والاب بتاع ال
+    */
+    position: absolute;
+    bottom:0;
+    right:0;
+    width:8px;
+    height:8px;
+    /* يتحرك بنعومه hoverعشان لما اعمل عليه */
+    transition: 0.2s;
+    /*  border_top_left واخذ top_left_corner span ال */
+    border-bottom:2px solid #D03447;
+    border-right:2px solid #D03447;
+    opacity: 0 ;
+} 
+/* --------------------------- when hover on <a> in navbar --------------------------- */
+/* we will appear the first span هعطي مسافة بالسالب عشان يتحرك لاعلي وللشمال */
+/* ------------------- before span ------------------ */
+.navContainer .navRow  ul li  a:hover span:first-child::before
+{
+    top:-10px;
+    left:-10px;
+    opacity: 1;
+} 
+/* ####### top_left_corner span [ apply "after" on first span inside <a> ] ####### */
+/* ------------------- after span ------------------ */
+.navContainer .navRow  ul li  a:hover span:first-child::after
+{
+    top:-10px;
+    right:-10px;
+    opacity: 1;
+} 
+/* ---------------------------------- second span inside <a> ------------------------------*/
+/* ####### top_left_corner span [ apply "befor" on second span inside <a> ] ####### */
+/* ------------------- before span ------------------ */
+.navContainer .navRow  ul li  a:hover span:last-child::before
+{
+    bottom:-10px;
+    left:-10px;
+    opacity: 1;
+} 
+/* ####### bottom_right span [ apply "after" on second span inside <a> ] ####### */
+/* ------------------- after span ------------------ */
+.navContainer .navRow  ul li  a:hover span:last-child::after
+{
+    bottom:-10px;
+    right:-10px;
+    opacity: 1;
+} 
+/* ############################################### end navbar ############################################### */  
+/* ############################################### start Header ############################################# */
+.headerContainer
+{
+    position: relative;
+    background-image:url('../images/back6.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center ; 
+    height:600px;
+}
+.headerContainer .info
+{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    /* عشان يجي في منتصف الصفحة */
+    transform: translate(-50%,-60%);
+    text-align: center;
+} 
+.headerContainer .info  h2
+{
+    text-align: center;
+    text-transform:capitalize;
+    font-size: 80px;
+    margin-bottom: 0px;
+}
+.headerContainer .info  p
+{
+    text-align: center;
+    text-transform:capitalize;
+    font-size: 40px;
+    margin-top:10px;
+
+}
+.headerContainer .info  p span
+{
+    color: #D03447 ;
+}
+
+/* ############################################### End Header ############################################# */

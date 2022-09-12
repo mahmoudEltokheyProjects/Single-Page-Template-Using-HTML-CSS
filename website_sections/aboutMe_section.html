@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/vendors/font-awesome.min.css">
+		<style>
+			*
+			{
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+			}
+			/* --------------------------  End : Global Classes style دي الكلاسات الاكثر تكرر -------------------------- */
+			body
+			{
+				margin: 0; 
+				padding: 0;
+				font-family: sans-serif;
+			}
+			/* ##############################  start about me section ###############################  */
+			.aboutMe
+			{
+				/* border: 2px solid #f0f; */
+				height: auto;
+				/* عشان المحتوي كله يكون موجود بداخله والزيادة يتم حذفها */
+				overflow: hidden;
+				background-color: #000;
+			}
+			.aboutMe .aboutMeContainer 
+			{
+				width: 85%;
+				height: auto;
+				/*  container عشان المحتوي يتم وضعه داخل ال */
+				overflow: hidden;
+				/* في المنتصف افقيا و مفيش مسافة راسيا  */
+				margin: 0px auto;
+				padding-top:10px;
+				padding-bottom:8px;
+				/* border: 2px solid rgb(145, 255, 0);  */
+			}
+			.aboutMe .aboutMeContainer .aboutHeader
+			{
+				width: 100%;
+				color:#fff;
+				text-align: center;
+				text-transform: capitalize;
+				margin-bottom:50px;
+			}
+			.aboutMe .aboutMeContainer .aboutHeader h2
+			{
+				font-size: 40px;
+			}
+			.aboutMe .aboutMeContainer .aboutMeInfo
+			{
+				width: 100%;
+				height:auto;
+				overflow: hidden; 
+				margin-top: 10px;
+				/* border: 2px solid #00f; */
+			}
+			.aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoImg
+			{
+				width:60%;
+				max-width: 66.66%; 
+				float: left;
+				/* بتاع الصورة بحرية بالنسبة للاب dotted frame عشان احرك ال */
+				position: relative;
+				/* border: 2px solid #00f; */
+				padding: 48px 10px ;
+				border-left:2px solid #222; 
+				border-right:2px solid #222; 
+				/* dotts عشان الصورة تظهر فوق ال image frame [ after ] اكبر من ال z-index وخده image بتاع ال container ال*/
+				z-index:0;
+				text-align: center;
+			}
+			/* style of the dotted frame in bottom right of image */
+			.aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoImg::after
+			{
+				content:"";
+				position: absolute;
+				bottom:-34px;
+				right:5px ;
+				width:250px;
+				height:250px;
+				background: url('../images/dotted_light.png');    
+				background-repeat: no-repeat;
+				/* وراه وبما ان  فيه جزء .aboutMeInfoImg اللي شايل الصورة اللي واخد كلاس container هتظهر في الطبقة الثانية بعد ال
+				.aboutMeInfoImg فهيكون ظاهر في الامام لان خارج المحتوي اللي واخد كلاسcontainer خارج بره ال image frame من ال
+				*/
+				z-index:-1;
+			}
+
+			/* هذه هي الصورة نفسها */
+			.aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoImg img
+			{
+				width: 85%;
+			}
+			.aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoPara
+			{
+				float: left;
+				width: 40%;
+				border-right:2px solid #222; 
+				padding: 10px;
+			}
+			.aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoPara h3
+			{
+				font-size: 30px;
+				color: #fff;
+			}
+			.aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoPara p
+			{
+				font-size:16px;
+				text-transform: capitalize;
+				line-height: 2.5 ;
+				color: #DDD;
+				padding-right:63px;
+			}
+			.aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoPara p span
+			{
+				color:#D03447;
+				text-transform: capitalize;
+			}
+			.aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoPara button
+			{
+				padding: 15px;
+				margin-left: 10px;
+				border-radius: 20px;
+				border:2px solid #222 ;
+				background-color: #000 ;
+				color:#fff;
+				text-transform: uppercase;
+				cursor: pointer;
+				/* عشان عند الضغط علي الزر لا يظهر اطار ابيض حوله */
+				outline: 0 ;
+				transition: 0.5s;
+			}
+			.aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoPara button:hover
+			{
+				border:2px solid #D03447 ; 
+				color:#D03447;  
+				/*  0.05 from origial width  بمقدار x لما احط الفارة علي الزرار هيزود عرض الزرار علي محور
+					0.05 from origial height بمقدار Y وهيزود من طول الزرار علي محور
+
+				*/
+				transform: scale(1.05,1.05);
+			}
+			/* ------------------------------------- Responsive portfolio section ------------------------------------- */
+			/* Extra small screen  rules */
+			@media ( min-width:0px) and ( max-width:767px) 	 
+			{
+				.aboutMe .aboutMeContainer .aboutMeInfo 
+				{
+				  /*  border: 2px solid #f00; */
+					text-align: center;
+				}
+
+				.aboutMe .aboutMeContainer .aboutMeInfo  .aboutMeInfoImg  ,
+				.aboutMe .aboutMeContainer .aboutMeInfo  .aboutMeInfoPara
+				{
+					width:100%;
+					margin:50px auto;
+					/* border:2px solid #0f0; */
+					/*  .aboutMeInfo عشان الصورة والنصوص يظهر في منتصف ال float هلغي ال */
+					float:none;
+					border: 0;
+				}    
+				.aboutMe .aboutMeContainer .aboutMeInfo  .aboutMeInfoImg  img
+				{
+					width:100%;
+				}
+				.aboutMe .aboutMeContainer .aboutMeInfo  .aboutMeInfoPara p
+				{
+					/*  .aboutMeInfoPara عشان النص يظهر في منتصف ال padding هلغي ال */
+					padding: 0 ;
+				}
+				.aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoImg::after
+				{
+					width:0px;
+					height:0px; 
+				}
+
+			}
+			/*  small screen  rules */
+			@media ( min-width:768px) and ( max-width:1082px) 	 
+			{
+
+				.aboutMe .aboutMeContainer .aboutMeInfo  .aboutMeInfoImg  ,
+				.aboutMe .aboutMeContainer .aboutMeInfo  .aboutMeInfoPara
+				{
+					width:50%;
+					border:0;
+				}
+				.aboutMe .aboutMeContainer .aboutMeInfo  .aboutMeInfoImg  
+				{
+					border-right: 2px solid #222;
+				}
+				.aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoImg img
+				{
+					width: 100%;
+				}
+				.aboutMe .aboutMeContainer .aboutMeInfo  .aboutMeInfoPara h3
+				{
+					font-size:25px;
+				}
+				.aboutMe .aboutMeContainer .aboutMeInfo  .aboutMeInfoPara p
+				{
+					font-size: 15px;
+				}
+				.aboutMe .aboutMeContainer .aboutMeInfo .aboutMeInfoImg::after
+				{
+					width:0px;
+					height:0px; 
+				}
+
+			}
+			/* ######################################### End about me  section #################################  */
+		</style>
+	</head>
+	<body>
+		<!-- ############################################ start about me section ################################ -->
+        <div class="aboutMe">
+            <div class="aboutMeContainer">
+                <!-- about me header -->
+                <div class="aboutHeader">
+                    <h2>about me</h2>
+                    <img src="../images/divider.png">
+                </div>
+                <!-- about me info -->
+                <div class="aboutMeInfo">
+                    <!-- abour me info image -->
+                    <div class="aboutMeInfoImg">
+                        <img src="../images/about.jpg">
+                    </div>
+                    <!-- abour me info paragraph -->
+                    <div class="aboutMeInfoPara">
+                        <h3>we can make it together</h3>
+                        <p> far far away, behind the world mountains, far from the countries vokalia and consonantia,
+                            there <span>live the bind</span> texts</p>
+                        <p>
+                            a small river named duden flows by their place and supplies it with the necessary regelialia.
+                            it is a paradisematic country, in which roasted parts of sentences fly into your mouth
+                        </p>
+                        <button>download my cv </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    	<!-- ################################################# End about me section #############################  -->	
+	</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/vendors/font-awesome.min.css">
+		<style>
+			*
+			{
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+			}
+
+			/* --------------------------  End : Global Classes style دي الكلاسات الاكثر تكرر -------------------------- */
+			body
+			{
+				margin: 0; 
+				padding: 0;
+				font-family: sans-serif;
+			}
+			/*  ########################################## start get in touch section   ##################################### */
+			.getInTouch
+			{
+				/* هياخذ كل العرض بتاع الاب يعني العرض بتاع الصفحة كلها */
+				width:100%;
+				height: auto;
+				overflow: hidden;
+				/* border:2px solid #f00; */
+				background-color: #000;
+				color:#fff;
+			}
+			.getInTouch  .getInTouchContainer 
+			{
+				width:85%;
+				height: auto;
+				overflow: hidden;
+				margin: 50px auto;
+				padding-bottom:50px;
+				/* border:2px solid #00f; */
+			}
+			.getInTouch  .getInTouchContainer  .getInTouchHeader
+			{
+				text-align: center;
+				margin-bottom: 50px;
+				/* border: 2px solid #0f0; */
+			}
+			.getInTouch  .getInTouchContainer  .getInTouchHeader h2
+			{
+				font-size: 35px;
+				text-transform: capitalize;
+			}
+			/* form   */
+			.getInTouch  .getInTouchContainer  .getInTouchInfo 
+			{
+				width: 60%;
+				float:left;
+				border-left: 1px solid #555;
+				padding-bottom:80px;
+			}
+			.getInTouch  .getInTouchContainer  form .nameEmailForm
+			{
+				width: 100%;
+				height: auto;
+				overflow: hidden;
+			   /* border: 2px solid #f00; */
+			}
+			.getInTouch  .getInTouchContainer  form .nameEmailForm  input[type=text] ,
+			.getInTouch  .getInTouchContainer  form .nameEmailForm  input[type=email] ,
+			.getInTouch  .getInTouchContainer  form   textarea
+			{
+				text-transform: uppercase ;
+				/* الخلفية مش هتكون موجودة حيث هتكون شفافة */
+				background-color: transparent;
+				outline: 0 ;
+				border:0;
+				color:#fff;
+				border-bottom: 2px solid #444;
+				padding-bottom:15px;
+				font-weight: bold;
+				font-size: 14px;
+			}
+			.getInTouch  .getInTouchContainer  form .nameEmailForm  input[type=text] ,
+			.getInTouch  .getInTouchContainer  form .nameEmailForm  input[type=email]
+			{
+				width:45%;
+				float:left;
+				margin-left:5%;
+			}
+			.getInTouch  .getInTouchContainer  form   textarea
+			{
+				width: 95%;
+				margin-top: 40px;
+				margin-left:5%;
+			}
+			/* ---------------  "send message" button --------------- */
+			.getInTouch  .getInTouchContainer  form  input[type=submit]
+			{
+				display: block;
+				padding: 15px;
+				margin-left: 30px;
+				margin-top: 30px;
+				background-color: transparent ;
+				border:1px solid #444;
+				color:#fff;
+				text-transform: uppercase;
+				border-radius: 30px;
+				cursor: pointer;
+				outline: 0 ;
+			}
+			/* --------------- when hover on "send message" button --------------- */
+			.getInTouch  .getInTouchContainer  form  input[type=submit]:hover
+			{
+				transform:scale(1.05,1.05);
+				border:1px solid #D03447;
+				color:#D03447;
+				transition: 0.5s ;
+			}
+			/* contact part */
+			.getInTouch  .getInTouchContainer  .contact
+			{
+				/* width فهيتم خصمهم من ال margin-left لان عندي 10 بيكسل لل */
+				width: 30%;
+				float: right;
+				height: 400px ;
+				margin-left: 10px;
+				border-left : 1px solid #444;
+				border-right: 1px solid #444;
+				padding-left:10px;
+			}
+			.getInTouch  .getInTouchContainer  .contact span
+			{
+				color:#888;
+				text-transform: uppercase ;
+				font-size: 14px;
+			}
+			.getInTouch  .getInTouchContainer  .contact     p
+			{
+				margin-top: 10px;
+				margin-bottom: 30px;
+
+			}
+			/* ----------------------------------- Responsive : media query of navbar -------------------------------------------- */
+			/*  Extra small screen  rules */
+			@media( min-width:0px )and (max-width:767px )
+			{
+				.getInTouch  .getInTouchContainer  .getInTouchInfo ,
+				.getInTouch  .getInTouchContainer  .contact 
+				{
+					width: 100%;
+					margin-top: 10px;
+					border:0;
+				}
+				.getInTouch  .getInTouchContainer  form .nameEmailForm  input[type=text] ,
+				.getInTouch  .getInTouchContainer  form .nameEmailForm  input[type=email] ,
+				.getInTouch  .getInTouchContainer  form   textarea
+				{
+					width: 100% ;
+					margin: 10px;
+				}
+				.getInTouch  .getInTouchContainer  form   input[type=submit] 
+				{
+					display: block;
+					margin: 30px auto;
+				}
+			}
+			/*  ########################################## end get in touch  section   ##################################### */
+
+		</style>
+    </head>
+    <body>
+		<!-- ################################# start get in touch section   ########################################## -->
+		<div class="getInTouch">
+			<div class="getInTouchContainer">
+				<div class="getInTouchHeader">
+					<h2>get In Touch</h2>
+					<img src="../images/divider.png" alt="image not found">
+				</div>
+				<!-- left part of get in touch section  -->
+				<div class="getInTouchInfo">
+					<form>
+						<div class="nameEmailForm">
+							<input type="text"   placeholder="name">
+							<input type="email"  placeholder="email">
+						</div>
+						<textarea placeholder="write your message" cols="50" rows="10"></textarea>
+						<input type="submit" value="send message">
+					</form>
+				</div>
+				<!-- right  part of get in touch section  -->
+				<div class="contact">
+					<span>email</span>
+					<p>info@yourdomain.com</p>
+					<span>phone</span>
+					<p>+02 0127 4792335</p>
+					<span>address</span>
+					<p>Egypt</p>
+				</div>
+			</div>
+		</div>
+		<!-- ########################################## end get in touch section   ############################################### -->
+	</body>
+</html>

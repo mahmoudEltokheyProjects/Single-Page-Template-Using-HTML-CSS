@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/vendors/font-awesome.min.css">
+		<style>
+			*
+			{
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+			}
+			/* --------------------------  End : Global Classes style دي الكلاسات الاكثر تكرر -------------------------- */
+			body
+			{
+				margin: 0; 
+				padding: 0;
+				font-family: sans-serif;
+			}
+			/* ######################################### start Brand section ############################################ */
+			.brand
+			{
+				width: 100%;
+				height: auto;
+				/* brand  عشان المحتوي يكون موجود بداخل ال */
+				overflow: hidden;
+				background-color:#000;
+				/* border: 2px solid #0ff; */
+			}
+			.brand  .brandContainer
+			{
+				width: 85%;
+				height: auto;
+				overflow: hidden;
+				margin: 0px auto;
+				padding-top:10px;
+				padding-bottom:8px;
+				/* border: 2px solid rgb(68, 0, 255); */
+				text-align: center;
+			}
+			.brand  .brandContainer .brandTitle
+			{
+				color:#fff;
+			}
+			/* brand title h3 */
+			.brand  .brandContainer .brandTitle  h3
+			{
+				font-size:45px;
+				text-transform: capitalize ;
+				color: #fff;
+			}
+			.brand  .brandContainer .brandBox
+			{
+				width:20%;
+				float: left;
+				border: 0.5px solid #222;
+			}
+			/*  ميكنش سميك brand عشان الخط الفاصل بين كل .brandContainer هينفذ هذا علي العناصر الفردية اللي وخده كلاس 
+				.brand .brandContainer:nth-child(odd)
+			*/
+			.brand  .brandContainer .brandBox img
+			{
+				width:100%;
+			}
+			/* -------------------------- Responsive portfolio section ------------------------------ */
+			/* Extra small screen  rules */
+			@media ( min-width:0px) and ( max-width:767px) 	 
+			{
+				.brand  .brandContainer .brandBox
+				{
+					width:100%;
+				}
+			}
+			/*  small screen  rules */
+			@media ( min-width:768px) and ( max-width:991px) 	 
+			{
+				.brand  .brandContainer .brandBox
+				{
+					width: 50%;
+				}
+			}
+			/* ###################################  End Brand section     #########################################  */
+		</style>
+	</head>
+	<body>
+		 <!-- ############################################ start Brand section ################################### -->
+        <div class="brand">
+            <div class="brandContainer">
+				 <div class="brandTitle">
+                    <h3>our brands</h3>
+                </div> 
+                <div class="brandBox">
+                    <img src="../images/brandImages/logo-1.png">
+                </div>
+                <div class="brandBox">
+                    <img src="../images/brandImages/logo-2.png">
+                </div>
+                <div class="brandBox">
+                    <img src="../images/brandImages/logo-3.png">
+                </div>
+                <div class="brandBox">
+                    <img src="../images/brandImages/logo-4.png">
+                </div>
+                <div class="brandBox">
+                    <img src="../images/brandImages/logo-3.png">
+                </div>
+            </div>
+        </div>
+    <!-- ############################################# End Brand section #################################### -->
+		
+	</body>
+</html>

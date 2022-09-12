@@ -1,0 +1,219 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>images carousel</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/vendors/font-awesome.min.css">
+        <style>
+            /* -------------- container of images carousel -------------- */
+            .sliderClass
+            {
+                border: 2px solid #f00;
+                height: auto;
+                /* عشان المحتوي يكزن موجود داخل الاب */
+                overflow: hidden;
+                padding: 10px;
+            }
+            /* -------------- images gallery of carousel -------------- */
+            .sliderClass .imagesGallery
+            {
+                /*   sliderClass هو ابن للديف الاب اللي واخد كلاس imagesGallery الديف اللي واخد كلاس
+                        حيث هياخذ 30 في المائة من عرضه و 50 في المائة من الارتفاع
+                */
+                width:50%;
+                height:50%;
+                border: 2px solid #0f0;
+                margin:20px auto; 
+                text-align: center;
+            }
+            /* -------------- each image in images gallery of carousel -------------- */
+            .sliderClass .imagesGallery img
+            {
+                width: 100%;
+                height: 100%;
+            }
+            /* -------------- left Arrow of images carousel -------------- */
+            .sliderClass .leftArrow
+            {
+                width: 33%;
+                float: left;
+                border: 2px solid #00f;
+                font-size:25px;
+            }
+            /* -------------- bullets of images carousel -------------- */
+            .sliderClass .bullets 
+            {
+                width: 33%;
+                float: left;
+                text-align: center ;
+                border: 2px solid #0ff;
+                margin: 0 auto ;
+            }
+            /* -------------- each bullet in bullets of images carousel -------------- */
+            .sliderClass .bullets  .bulletSpan
+            {
+                width:5px;
+                height:7px;
+                padding:5px;
+                display: inline-block;
+                border-radius: 50%;
+                border:2px solid #000 ;
+                outline:none;
+                transition: 0.5s;
+            }
+            /* -------------- red background for current bullet in bullets of images carousel -------------- */
+            .active
+            {
+                background: #f00; width: 1050px;
+            }
+            /*  bullets السهم الشمال واليمين وال  */
+            /* ------------------- left arrow , three bullets , right arrow ------------------- */
+            .sliderClass    .leftArrow      span  i.fa-chevron-left  ,
+            .sliderClass    .bullets        span                     ,
+            .sliderClass    .rightArrow     span  i.fa-chevron-right 
+            {
+                  cursor: pointer; 
+            }
+            /* -------------- right Arrow of images carousel -------------- */
+            .sliderClass .rightArrow
+            {
+                width: 33%;
+                float: left;
+                border: 2px solid #ff0;
+                text-align: right ;
+                font-size:25px;
+            }
+            /* -------------- image title of carousel -------------- */
+            .sliderClass  .imageTitleClass
+            {
+                display: block;
+                width: 10%;
+                text-align: center;
+                margin: 0px  auto;
+                margin-top:60px;
+                padding: 5px;
+                font-weight: bold;
+                font-size: 25px;
+                border:2px solid #000;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="sliderClass">
+            <!-- images gallery of carousel -->
+            <div id="imgGalleryVar"class="imagesGallery">
+                <img src="images/portfolioImages/img1_1.jpeg" name="slideShowImg">
+            </div>
+            <!-- left Arrow of images carousel -->
+            <div class="leftArrow" id="leftArrowId">
+                <span><i class="fa fa-chevron-left"></i></span>
+            </div>
+            <!-- bullets of images carousel -->
+            <div class="bullets" id="bulletsId">
+                <span class="bulletSpan"></span>
+                <span class="bulletSpan"></span>
+                <span class="bulletSpan"></span>
+                <span class="bulletSpan"></span>
+                <span class="bulletSpan"></span>
+            </div>
+            <!-- right Arrow of images carousel -->
+            <div class="rightArrow" id="rightArrowId">
+                <span><i class="fa fa-chevron-right"></i></span>
+            </div>
+            <!-- image title of carousel -->
+            <div id="imageTitleId" class="imageTitleClass">
+                <p></p>
+            </div>
+        </div>
+        <script>
+           
+          /* fa fa-chevron-left ===  &#10094;
+             fa fa-chevron-right ===  &#10095;
+          */    
+                
+        // --------------------------------------------------- create skitter(slider) ++++++++++++++++++++++++++++++++++++++++++++++++++
+      var slideArr=["images/portfolioImages/img1_1.jpeg" ,
+                    "images/portfolioImages/img1_2.jpeg" ,
+                    "images/portfolioImages/img1_3.jpeg" ,
+                    "images/portfolioImages/img1_4.jpeg" ,
+                    "images/portfolioImages/img2_1.jpeg"];
+            imgParaArr = ['image 1','image 2','image 3','image 4','image 5'];
+            imgCounter = 0 ;
+            imgGalleryVar=document.getElementById("imgGalleryVar") ,
+            leftArrBut=document.getElementById("leftArrowId"),
+            rightArrBut=document.getElementById("rightArrowId"),
+            // 5 span  هتكون مصفوفة فيها ال bulletsArr فال children span ( bullets ) هيرجع كل ال 
+            bulletsArr=document.getElementById("bulletsId").children ,
+            imageTitle=document.getElementById("imageTitleId");
+            console.log(bulletsArr);
+            /*  slider هحط اول صورة افتراضية لل*/
+            document.slideShowImg.src = slideArr[imgCounter];
+            imageTitle.innerHTML = imgParaArr[imgCounter];
+            bulletsArr[imgCounter].classList.add("active");        
+            console.log("span number = ",bulletsArr.length);        
+        // ------------- Remove class="active" -------------  bullets هذه الدالة بتحذف الدائرة الحمراء من علي كل ال ---------
+            function removeBullets()
+                {
+                    for( var j=0 ; j < bulletsArr.length ; j++ )
+                    {
+                        bulletsArr[j].classList.remove("active");                     
+                    }     
+                }
+        // -------------------------------------------------- left Arrow slider --------------------------------------------------
+            leftArrBut.onclick = function(){
+                removeBullets();
+                imgCounter--;
+                if( imgCounter < slideArr.length && imgCounter >= 0 )
+                {
+                      // set the next image in carousel
+                    document.slideShowImg.src = slideArr[imgCounter];
+                     // set the next image title in carousel
+                    imageTitle.innerHTML = imgParaArr[imgCounter];
+                }
+                else 
+                {
+                    imgCounter= slideArr.length-1;
+                    // set the next image in carousel
+                    document.slideShowImg.src = slideArr[imgCounter];
+                    // set the next image title in carousel
+                    imageTitle.innerHTML = imgParaArr[imgCounter];
+                }
+                console.log(bulletsArr[imgCounter].classList); 
+                console.log(imgCounter);
+                bulletsArr[imgCounter].classList.add("active");                      
+            };
+       
+        // -------------------------------------------------- Right Arrow slider ----------------------------------------------------
+            rightArrBut.onclick = function(){
+                imgCounter++ ;
+                removeBullets();
+                if( imgCounter < slideArr.length )
+                    {
+                        // add image to the slider with src=slideArr[imgCounter] where slideShowImg is the name of <img>
+                        // set the next image in carousel
+                        document.slideShowImg.src = slideArr[imgCounter];
+                         // set the next image title in carousel
+                         imageTitle.innerHTML = imgParaArr[imgCounter];
+                    }
+                else
+                    {
+                        imgCounter=0;
+                        document.slideShowImg.src = slideArr[imgCounter];
+                        // set the next image title in carousel
+                        imageTitle.innerHTML = imgParaArr[imgCounter];
+                    }
+                    console.log(bulletsArr[imgCounter].classList); 
+                    console.log(imgCounter);
+                    bulletsArr[imgCounter].classList.add("active");   
+                };    
+                
+            
+                
+                
+
+            
+        </script>
+    </body>
+</html>
